@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --theme: #1F51FF;
+  --background: #1a1a1f;
+  --navy: #242d3c;
+  --secondary: #8892b0;
+  --tertiary: #16161D;
+  --primary: #ccd6f6;
+}
+
+html,
+body {
+  scroll-behavior: smooth !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+  background: var(--tertiary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 2px;
+}
+
+.blur {
+  filter: blur(10px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.link {
+  display: inline-block;
+  position: relative;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1.5px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--theme);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.link:hover::after,
+.link:focus::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media screen and (max-width: 1020px) {
+  .nav-items {
+    position: fixed;
+    height: 100vh;
+    right: 0;
+    width: 0%;
+    opacity: 0;
+    visibility: hidden;
+    top: 0;
+    padding: 50px 10px;
+    background-color: var(--tertiary);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    z-index: 11;
+  }
+
+  .nav-responsive {
+    width: min(75vw, 400px);
+    visibility: visible;
+    opacity: 1;
+  }
+}
