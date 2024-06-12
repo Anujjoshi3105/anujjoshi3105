@@ -11,25 +11,30 @@ interface TemplateProps {
 
 const Template: React.FC<TemplateProps> = ({ title, subtitle, children, id = '', className = '' }) => {
   return (
-    <motion.section
-      className={`w-full pt-20 ${className}`} 
-      id={id}
+    <section className={`w-full pt-16 ${className}`} id={id}>
+      <motion.div
+      className="border-l-[2.5px] border-theme px-4 my-16"
       initial="hidden"
       whileInView="visible"
       transition={{ duration: 1 }}
       variants={{
-        visible: { opacity: 1, y: 0 },
-        hidden: { opacity: 0, y: 100 },
+        visible: { opacity: 1, x: 0 },
+        hidden: { opacity: 0, x: -50 },
       }}
-    >
-      <div className="border-l-[2.5px] border-theme px-4 my-16">
-        <h1 className="text-4xl font-bold mb-2">{title}</h1>
+    >   <h1 className="text-4xl font-bold mb-2">{title}</h1>
         <h3 className="font-[500]">{subtitle}</h3>
-        </div>
-      <div className="px-4 my-[4rem] mx-auto">
+      </motion.div>
+      <motion.div className="px-4 my-[4rem] mx-auto"
+      initial="hidden"
+      whileInView="visible"
+      transition={{ duration: 1.2 }}
+      variants={{
+        visible: { opacity: 1, y: 0},
+        hidden: { opacity: 0, y: 20 },
+      }}>
         {children}
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 };
 

@@ -57,6 +57,28 @@ body {
   transform-origin: bottom left;
 }
 
+.photo {
+  transform-style: preserve-3d;
+}
+
+.photo:hover {
+  transform: perspective(800px) rotateY(-180deg);
+}
+
+.bottom-photo {
+  transform: perspective(800px) translateZ(-1px) scaleX(-1);
+}
+
+.fig {
+  transform: perspective(800px) translateZ(30px);
+}
+
+.out {
+  outline-color: rgba(255, 255, 255, 0.271);
+  backdrop-filter: blur(5px);
+}
+
+
 @media screen and (max-width: 1020px) {
   .nav-items {
     position: fixed;
@@ -66,7 +88,6 @@ body {
     opacity: 0;
     visibility: hidden;
     top: 0;
-    padding: 50px 10px;
     background-color: var(--tertiary);
     flex-direction: column;
     justify-content: center;

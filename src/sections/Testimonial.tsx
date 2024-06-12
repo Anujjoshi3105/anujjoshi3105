@@ -24,7 +24,7 @@ const Testimonial = () => {
   }, [handleNext]);
 
   return (
-    <Template title="Testimonial" subtitle="What others say about me" className='md:flex items-baseline justify-between'>
+    <Template title="Testimonial" subtitle="What others say about me" className='lg:flex items-baseline justify-between'>
       <div className="lg:w-4/5 mx-auto mt-6 grid grid-cols-[40px_auto_40px] [grid-template-areas:'nav-left_slider_nav-right'] gap-4 md:gap-6">
         <button
           onClick={handlePrev}

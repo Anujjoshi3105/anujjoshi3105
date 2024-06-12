@@ -13,21 +13,21 @@ const Work = () => {
     <>
     <Template title="Work" subtitle="My Projects" id="work">
       <div className="upper gap-2 justify-center w-full flex items-center mb-8">
-        <button
-          className={`p-1 hover:bg-tertiary text-base w-fit sm:px-5 sm:py-2 sm:text-lg font-semibold cursor-pointer transition-all delay-150 ${pIndex === -1 ? 'border-b-2 border-b-theme bg-tertiary' : ''}`}
+        <div
+          className={`link p-1 text-base w-fit sm:px-5 sm:py-2 sm:text-lg font-semibold cursor-pointer transition-all delay-150 ${pIndex === -1 ? 'border-b-2 border-b-theme bg-tertiary' : ''}`}
           onClick={() => setPIndex(-1)}
           key="all"
         >
           All
-        </button>
+        </div>
         {projects.map((project, index) => (
-          <button
-            className={`p-1 hover:bg-tertiary text-base w-fit sm:px-5 sm:py-2 sm:text-lg font-semibold cursor-pointer transition-all delay-150 ${pIndex === index ? 'border-b-2 border-b-theme bg-tertiary' : ''}`}
+          <div
+            className={`link p-1 text-base w-fit sm:px-5 sm:py-2 sm:text-lg font-semibold cursor-pointer transition-all delay-150 ${pIndex === index ? 'border-b-2 border-b-theme bg-tertiary' : ''}`}
             onClick={() => setPIndex(index)}
             key={index}
           >
             {project.header}
-          </button>
+          </div>
         ))}
       </div>
       <div className="lower flex justify-start items-start w-full gap-8 flex-wrap">

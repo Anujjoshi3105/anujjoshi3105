@@ -17,6 +17,10 @@ const config: Config = {
         'background': 'var(--background)',
       },
       keyframes: {
+        identy: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
         animateIcon: {
           '0%': { top: '0' },
           '100%': { top: '90%' },
@@ -40,6 +44,7 @@ const config: Config = {
         },
       },
       animation: {
+        identy: 'identy 5s linear infinite',
         animateIcon: 'animateIcon 0.5s ease-in-out infinite',
         spinOnce: 'spinOnce 0.5s linear forwards',
         typing: 'typing 2s steps(20) infinite alternate, blink 1s infinite',

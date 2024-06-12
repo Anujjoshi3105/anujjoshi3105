@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 
-const ModeButton = () => {
+const Mode = () => {
   const [isDark, setIsDark] = useState(true);
 
   const toggleTheme = () => {
@@ -36,4 +36,4 @@ const ModeButton = () => {
   );
 };
 
-export default ModeButton;
+export default Mode;

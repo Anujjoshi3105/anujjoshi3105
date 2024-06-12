@@ -25,9 +25,9 @@ const Hero = () => {
     <div className="h-[75vh] relative grid items-center">
       <motion.div 
         className="z-[-10] hidden lg:block lg:absolute -right-12 lg:w-[600px] lg:h-[600px] object-cover animate-profile rounded-full transition-all border-8 border-primary bg-theme"
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
+        transition={{ ease: "easeOut", duration: 2 }}
       >
         <Image src="/logo.png" alt="Anuj Joshi" layout="fill" objectFit="cover" />
       </motion.div>

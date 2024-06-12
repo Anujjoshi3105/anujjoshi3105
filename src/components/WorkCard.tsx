@@ -1,7 +1,7 @@
-import { FaGithub, FaGlobe, FaFolderOpen, FaFolder } from 'react-icons/fa';
+import { FaGithub, FaGlobe } from 'react-icons/fa';
 import Image from 'next/image';
 import { FC } from 'react';
-
+import Link from 'next/link';
 interface Project {
   img: string;
   title: string;
@@ -17,41 +17,38 @@ interface WorkCardProps {
 
 const WorkCard: FC<WorkCardProps> = ({ project }) => {
   const techStackList = project.techStack.map((tech, index) => (
-    <li key={index} className='bg-theme rounded-lg px-2 p-1'>{tech}</li>
+    <li key={index} className='bg-theme rounded-md px-2 p-1 text-nowrap text-sm text-tertiary'>{tech}</li>
   ));
 
   return (
-    <div className='group lg:w-1/4 flex-grow flex justify-start items-start gap-8 flex-col px-5 py-2 transition-all delay-100 sm:w-full md:w-[40%] sm:gap-4 group relative overflow-hidden rounded-xl hover:scale-105 hover:border-b-4 hover:border-r-4 hover:border-theme'>
-      <Image
-        src={project.img}
-        alt={project.title}
-        width={500}
-        height={300}
-        className='w-full h-full rounded-md inset-0 group-hover:opacity-80 absolute object-cover opacity-20 -z-[-10] '
-      />
-      <div className="flex w-full items-center justify-between text-theme z-10">
-        <FaFolderOpen className='text-5xl group-hover:hidden' />
-        <FaFolder className="text-5xl hidden group-hover:block" />
-        <div className="flex sm:text-xl gap-4 text-base">
-          <a href={project.github} target='_blank' rel='noopener noreferrer'>
-            <FaGithub className='hover:text-primary' />
-          </a>
-          <a href={project.link} target='_blank' rel='noopener noreferrer'>
-            <FaGlobe className='hover:text-primary' />
-          </a>
-        </div>
-      </div>
-      <div className="down flex justify-start items-start gap-2 flex-col w-full capitalize z-10 p-1 rounded-lg  group-hover:bg-secondary link">
-        <h3 className='text-base font-semibold mb-2 md:mb-4'>{project.title}</h3>
-        <p className='text-sm mb-2 md:mb-4'>{project.desc.replace(/'/g, '&#39;')}</p>
-      </div>
-      <div className="down flex justify-start items-start gap-2 flex-col w-full capitalize z-10">
-        <ul className='flex gap-2 text-primary text-sm'>
+    <figure className="w-full md:w-[45%] xl:w-[30%] h-[400px] relative photo transition-all duration-700 rounded-md outline-none">
+      <div className="w-full h-full bottom-photo absolute bg-tertiary flex flex-col justify-center px-5 leading-5 md:leading-6 border-2">
+        <Link href={project.github} className='absolute top-4 left-4 text-xl hover:text-theme hover:scale-110'>
+            <FaGithub />
+        </Link>
+        <Link href={project.link}  className='absolute top-4 right-4 text-xl hover:text-theme hover:scale-110'>
+            <FaGlobe />
+        </Link>
+        <p className="sm:text-xl capitalize font-semibold">{project.title}</p>
+        <ul className='flex gap-2 my-2'>
           {techStackList}
         </ul>
+        <p className="my-4">{project.desc}</p>
       </div>
-    </div>
-  );
-};
+      <div className="w-full h-full object-cover brightness-90 absolute">
+        <Image src={project.img} alt={project.title} layout="fill" objectFit="cover" />
+      </div>
+      <Link href={project.github} className='absolute top-4 left-4 text-xl text-theme hover:scale-110'>
+        <FaGithub />
+        </Link>
+        <Link href={project.link}  className='absolute top-4 right-4 text-xl text-theme hover:scale-110'>
+            <FaGlobe />
+          </Link>
+      <figcaption className="absolute bottom-5 left-4 fig">
+        <ul className="flex flex-wrap gap-2">{techStackList}</ul>
+      </figcaption>
+    </figure>
+  )
+}
 
 export default WorkCard;

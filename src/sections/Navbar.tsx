@@ -6,7 +6,7 @@ import { TbHexagonLetterAFilled } from "react-icons/tb";
 import React, { useEffect, useState, useCallback } from "react";
 import { navLink } from "@/helper/data";
 import { motion } from "framer-motion";
-import ModeButton from "@/components/ModeButton"
+import Mode from "@/components/Mode"
 
 function Navbar() {
   const [responsiveNavVisible, setResponsiveNavVisible] = useState(false);
@@ -78,7 +78,7 @@ function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut", delay: 1 }}
               >
-              <ModeButton />
+              <Mode />
             </motion.li>
           </ul>
         </div>
