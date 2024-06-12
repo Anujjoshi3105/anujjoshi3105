@@ -36,9 +36,9 @@ function About() {
               Currently, I&apos;m leading a project called <Link
                 className="link text-theme"
                 target="_blank"
-                href="https://frontendvita.com"
+                href="https://smithstory.vercel.app"
               >
-              Story Smith</Link>, an LLM model aimed at 
+              Smith Story</Link>, an LLM model aimed at 
               crafting stories with images. Join me in this exciting endeavor to contribute
               to cutting-edge storytelling technology!
             </p>

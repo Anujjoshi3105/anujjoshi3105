@@ -38,7 +38,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
         >
-          Hi, I&apos;m <span className="text-theme">Anuj Joshi</span>
+          Hi, I&apos;m <span className="text-theme backdrop-blur-3xl">Anuj Joshi</span>
         </motion.h1>
         <motion.h3
           className='font-[500] text-[1rem] sm:text-[2rem] md:text-2xl mt-2 md:mt-5 animate-typing overflow-hidden whitespace-nowrap'
