@@ -64,7 +64,7 @@ const Hero = () => {
         </motion.div>
       </div>
       <motion.div
-        className="flex items-center lg:gap-20 gap-10 justify-center hidden sm:block"
+        className="items-center lg:gap-20 gap-10 justify-center hidden sm:flex"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut", delay: 0.6 }}
