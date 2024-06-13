@@ -14,8 +14,9 @@ export const metadata: Metadata = {
   title: "Anuj Joshi - Portfolio",
   description: `I'm Anuj Joshi, deeply passionate about continuous learning and personal growth. My journey spans various domains like web development, web3, and AI-ML, where I find endless curiosity and potential. Beyond academics, I thrive on project experiences and community engagement. Excited to apply my diverse skill set and passion for AI-ML in collaborative environments.`,
   keywords: "Anuj Joshi, CSE, DTU, Software, Engineer, SR-DTU, LIMSTIR-DTU, Machine Learning, Hire, Resume, Robotics, Society, Web, Development",
-  authors: { name: "Anuj Joshi"}
+  authors: { name: "Anuj Joshi" },
 };
+
 
 export default function RootLayout({
   children,
@@ -26,6 +27,7 @@ export default function RootLayout({
     <ThemeProvider>
     <html lang="en">
       <head>
+      <meta name="google-site-verification" content="a-tlC7lxqKDFcOSkl7QSrELzrggflM2cjPn8ishZQs8" />
         <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
       </head>
       <body className={`bg-background text-primary ${poppins.className}`}>
