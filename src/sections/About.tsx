@@ -10,14 +10,14 @@ function About() {
   return (
     <Template title={"About Me"} subtitle={"My Introduction"} id={"about"}>
       <div>
-        <div className="mb-5 justify-center items-center flex-col lg:grid lg:grid-cols-5 lg:gap-10 contain-layout about-grid">
+        <div className="mb-5 justify-center items-center flex-col lg:grid lg:grid-cols-5 lg:gap-5">
           <motion.div 
             className="relative w-max h-max group lg:col-span-2 group mb-10"
-            initial={{ opacity: 0, x: 15 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 10 }}
+            whileInView={{ opacity: 1, x: -5 }}
             transition={{ duration: 1.5, ease: "easeInOut" }}>
-            <div className="absolute bg-theme group-hover:-translate-x-3 group-hover:-translate-y-3 left-5 top-5 h-[225px] w-[225px] sm:h-[400px] sm:w-[400px] lg:w-[360px] lg:h-[360px] rounded-md transition-all delay-100"></div>
-            <div className="h-[225px] w-[225px] sm:h-[400px] sm:w-[400px] lg:w-[360px] lg:h-[360px] object-cover">
+            <div className="absolute bg-theme group-hover:-translate-x-3 group-hover:-translate-y-3 left-5 top-5 h-[225px] w-[225px] sm:h-[400px] sm:w-[400px] h-max-1/2 w-max-1/2 rounded-md transition-all delay-100"></div>
+            <div className="h-[225px] w-[225px] sm:h-[400px] sm:w-[400px] h-max-1/2 w-max-1/2 object-cover">
               <Image src="/me.jpg" alt="profile" className="rounded-md" fill />
             </div>
           </motion.div>

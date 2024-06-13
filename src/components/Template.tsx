@@ -24,7 +24,7 @@ const Template: React.FC<TemplateProps> = ({ title, subtitle, children, id = '',
     >   <h1 className="text-4xl font-bold mb-2">{title}</h1>
         <h3 className="font-[500]">{subtitle}</h3>
       </motion.div>
-      <motion.div className="px-4 my-[4rem] mx-auto"
+      <motion.div className="my-[4rem] mx-auto"
       initial="hidden"
       whileInView="visible"
       transition={{ duration: 1.2 }}

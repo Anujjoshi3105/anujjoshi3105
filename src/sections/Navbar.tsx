@@ -51,7 +51,7 @@ function Navbar() {
       }}
       animate={hidden ? 'hidden' : 'visible'}
       transition={{ duration: 0.4, ease: 'easeInOut' }}
-      className="min-h-8 lg:px-20 lg:py-6 md:px-12 p-6 sticky top-0 z-10 backdrop-blur-md"
+      className="min-h-8 lg:px-20 lg:py-8 md:px-12 px-6 py-4 sticky top-0 z-10 backdrop-blur-md"
     >
       <div className="flex justify-between items-center relative transition-all ease-in-out delay-300">
         <motion.div
