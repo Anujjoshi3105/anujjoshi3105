@@ -16,7 +16,7 @@ const Template: React.FC<TemplateProps> = ({ title, subtitle, children, id = '',
       className="border-l-[2.5px] border-theme px-4 my-16"
       initial="hidden"
       whileInView="visible"
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.5 }}
       variants={{
         visible: { opacity: 1, x: 0 },
         hidden: { opacity: 0, x: -50 },
@@ -24,10 +24,10 @@ const Template: React.FC<TemplateProps> = ({ title, subtitle, children, id = '',
     >   <h1 className="text-4xl font-bold mb-2">{title}</h1>
         <h3 className="font-[500]">{subtitle}</h3>
       </motion.div>
-      <motion.div className="my-[4rem] mx-auto"
+      <motion.div className="my-[4rem] px-2 mx-auto"
       initial="hidden"
       whileInView="visible"
-      transition={{ duration: 1.2 }}
+      transition={{ duration: 1 }}
       variants={{
         visible: { opacity: 1, y: 0},
         hidden: { opacity: 0, y: 20 },

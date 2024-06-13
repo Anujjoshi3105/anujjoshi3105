@@ -36,7 +36,7 @@ const WorkCard: FC<WorkCardProps> = ({ project }) => {
         <p className="my-4">{project.desc}</p>
       </div>
       <div className="w-full h-full object-cover brightness-90 absolute">
-        <Image src={project.img} alt={project.title} layout="fill" className='object-cover' />
+        <Image src={project.img} alt={project.title} fill className='object-cover' />
       </div>
       <a href={project.github} className='absolute top-4 left-4 text-xl text-theme hover:scale-110' target="_blank">
         <FaGithub />

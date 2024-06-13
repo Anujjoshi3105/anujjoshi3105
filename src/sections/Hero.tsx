@@ -24,8 +24,8 @@ const Hero = () => {
   return (
     <div className="flex lg:flex-row-reverse flex-col items-center justify-between gap-4">
       <motion.div 
-        className="lg:max-w-[60vw] w-fit h-fit max-h-[70vh] lg:max-h-[80vh] object-cover overflow-hidden animate-profile rounded-full transition-all border-8 border-primary bg-theme"
-        initial={{ opacity: 0, scale: 0.8 }}
+        className="lg:max-w-[60vw] w-fit h-fit max-h-[70vh] lg:max-h-[80vh] object-cover overflow-hidden whileInView-profile rounded-full transition-all border-8 border-primary bg-theme"
+        initial={{ opacity: 0, scale: 0.6 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
       >
@@ -36,15 +36,15 @@ const Hero = () => {
         <motion.h1
           className='text-nowrap font-bold text-[2rem] sm:text-[3rem] md:text-6xl text-center lg:text-left'
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
         >
           Hi, I&apos;m&nbsp;<span className="text-theme backdrop-blur-3xl hover:text-stroke">Anuj Joshi</span>
         </motion.h1>
         <motion.h3
-          className='font-[500] text-[1rem] sm:text-[1.5rem] md:text-2xl mt-2 md:mt-5 animate-typing overflow-hidden whitespace-nowrap'
+          className='font-[500] text-[1rem] sm:text-[1.5rem] md:text-2xl mt-2 md:mt-5 whileInView-typing overflow-hidden whitespace-nowrap'
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeInOut", delay: 0.2 }}
         >
           {roles[currentRoleIndex]}
@@ -52,7 +52,7 @@ const Hero = () => {
         <motion.div
           className="flex flex-wrap gap-5 sm:gap-10 py-10 justify-center lg:justify-start"
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeInOut", delay: 0.4 }}
         >
           <Link href="/#contact" passHref>
@@ -66,8 +66,8 @@ const Hero = () => {
       <motion.div
         className="items-center lg:gap-20 gap-10 justify-center flex"
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeInOut", delay: 0.6 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeInOut", delay: 0.2 }}
       >
         <Social title="LinkedIn" name="@Anujjoshi3105" link="https://www.linkedin.com/in/anujjoshi3105/" icon={FaLinkedinIn} />
         <Social title="Twitter" name="@Anujjoshi3105" link="https://x.com/AnujJoshi3105/" icon={FaXTwitter} />

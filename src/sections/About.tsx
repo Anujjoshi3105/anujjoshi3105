@@ -13,9 +13,9 @@ function About() {
         <div className="mb-5 justify-center items-center flex-col lg:grid lg:grid-cols-5 lg:gap-5">
           <motion.div 
             className="relative w-max h-max group lg:col-span-2 group mb-10"
-            initial={{ opacity: 0, x: 10 }}
-            whileInView={{ opacity: 1, x: -5 }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}>
+            initial={{ opacity: 0, x: 0 }}
+            whileInView={{ opacity: 0.8, x: 5 }}
+            transition={{ duration: 1, ease: "easeInOut" }}>
             <div className="absolute bg-theme group-hover:-translate-x-3 group-hover:-translate-y-3 left-5 top-5 h-[225px] w-[225px] sm:h-[400px] sm:w-[400px] h-max-1/2 w-max-1/2 rounded-md transition-all delay-100"></div>
             <div className="h-[225px] w-[225px] sm:h-[400px] sm:w-[400px] h-max-1/2 w-max-1/2 object-cover">
               <Image src="/me.jpg" alt="profile" className="rounded-md" fill />
