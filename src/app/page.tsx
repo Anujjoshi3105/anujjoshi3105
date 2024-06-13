@@ -12,10 +12,11 @@ import Contact from '@/sections/Contact';
 import Testimonial from '@/sections/Testimonial';
 import Footer from '@/sections/Footer';
 import Theme from '@/components/Theme';
+import Nav from '@/sections/Nav'
 export default function Page() {
   return (
     <>
-      <Navbar />
+    <Navbar />
       <main className="lg:mx-[9rem] md:mx-[4rem] sm:ml-[4rem] lg:my-[5rem] m-[2.5rem] mr-0">
         <Hero />
         <About />

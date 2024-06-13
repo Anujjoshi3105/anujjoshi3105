@@ -21,7 +21,7 @@ const Theme = () => {
           toggleTheme();
           goToTop();
         }}
-        className="fixed z-50 bottom-8 p-2 right-10 lg:right-8 w-10 h-10 rounded-full shadow-lg hover:bg-background hover:text-theme bg-theme text-background duration-150 hover:scale-110 cursor-pointer"
+        className="fixed z-50 bottom-8 p-2 text-lg right-6 w-10 h-10 rounded-full shadow-lg hover:bg-background hover:text-theme bg-theme text-background transition-all ease-in-out duration-200 hover:scale-150 cursor-pointer"
       />
     </motion.div> 
   );

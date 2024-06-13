@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { FaAlignJustify, FaTimes } from 'react-icons/fa';
+import { FaAlignJustify, FaTimes, FaGithub, FaLinkedin, FaTelegram, FaInstagram  } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
 import { TbHexagonLetterAFilled } from 'react-icons/tb';
 import React, { useEffect, useState, useCallback } from 'react';
 import { navLink } from '@/app/data';
@@ -50,7 +51,7 @@ function Navbar() {
       }}
       animate={hidden ? 'hidden' : 'visible'}
       transition={{ duration: 0.4, ease: 'easeInOut' }}
-      className="min-h-8 lg:px-20 lg:py-6 md:px-12 p-6 sticky top-0 z-50 backdrop-blur-md"
+      className="min-h-8 lg:px-20 lg:py-6 md:px-12 p-6 sticky top-0 z-10 backdrop-blur-md"
     >
       <div className="flex justify-between items-center relative transition-all ease-in-out delay-300">
         <motion.div
@@ -75,7 +76,7 @@ function Navbar() {
         >
           {responsiveNavVisible ? <FaTimes /> : <FaAlignJustify />}
         </motion.div>
-        <div className={`${responsiveNavVisible && 'nav-responsive'} nav-items flex gap-[3rem] font-semibold`}>
+        <div className={`${responsiveNavVisible && 'nav-responsive'} ${!responsiveNavVisible ? 'lg:flex hidden': ''} nav-items flex gap-[3rem] font-semibold transition-all ease-in-out delay-500`}>
           <ul className="flex lg:flex-row flex-col gap-12 text-center">
             {navLink.map(({ name, link }, index) => (
               <motion.li
@@ -94,8 +95,16 @@ function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, ease: 'easeInOut', delay: 1 }}
             >
-              <Mode />
+              <Mode />            
             </motion.li>
+            <p className='lg:hidden flex gap-5 text-lg sm:text-2xl py-5'>
+                <a className="hover:text-theme hover:-translate-y-2 hover:animate-bounce delay-200" href="https://github.com/Anujjoshi3105/" target="_blank"><FaGithub /></a>
+                <a className="hover:text-theme hover:-translate-y-2 hover:animate-bounce delay-200" href="https://www.linkedin.com/in/anujjoshi3105/" target="_blank"><FaLinkedin /></a>
+                <a className="hover:text-theme hover:-translate-y-2 hover:animate-bounce delay-200" href="https://x.com/anujjoshi3105" target="_blank"><FaXTwitter /></a>
+                <a className="hover:text-theme hover:-translate-y-2 hover:animate-bounce delay-200" href="https://t.me/anujjoshi3105/" target="_blank"><FaTelegram /></a>
+                <a className="hover:text-theme hover:-translate-y-2 hover:animate-bounce delay-200" href="https://www.instagram.com/anujjoshi3105/" target="_blank"><FaInstagram /></a>
+            </p>
+
           </ul>
         </div>
       </div>

@@ -27,7 +27,6 @@ export default function RootLayout({
     <ThemeProvider>
     <html lang="en">
       <head>
-      <meta name="google-site-verification" content="a-tlC7lxqKDFcOSkl7QSrELzrggflM2cjPn8ishZQs8" />
         <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
       </head>
       <body className={`bg-background text-primary ${poppins.className}`}>

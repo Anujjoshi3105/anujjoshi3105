@@ -19,13 +19,13 @@ const Experience = () => {
 
   return (
       <Template title="Experience" subtitle="Where I've worked" id="experience">
-        <div className="experience mx-auto max-w-5xl">
+        <div className="mx-auto max-w-5xl">
           <div className="grid grid-cols-1 md:grid-cols-[25%,75%] gap-4 md:p-4">
             <ul className="relative h-max-content flex md:block overflow-x-scroll overflow-y-hidden md:overflow-visible">
             <div className="underline bg-theme absolute left-0 md:left-[-0.5px] top-0 md:h-10 md:w-[4px] transition-all duration-300 ease-in-out"></div>
               {experiences.map((experience, index) => (
                 <li
-                  className={`h-10 px-4 flex items-center cursor-pointer w-content text-nowrap hover:bg-secondary group border-primary md:border-l-2`}
+                  className={`h-10 px-4 flex text-lg items-center cursor-pointer w-content text-nowrap hover:bg-secondary group border-primary md:border-l-2`}
                   onClick={() => setSelected(index)}
                   key={experience.name}
                 >
