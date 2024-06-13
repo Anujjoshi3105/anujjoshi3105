@@ -12,7 +12,7 @@ import Contact from '@/sections/Contact';
 import Testimonial from '@/sections/Testimonial';
 import Footer from '@/sections/Footer';
 import Theme from '@/components/Theme';
-import Nav from '@/sections/Nav'
+
 export default function Page() {
   return (
     <>
