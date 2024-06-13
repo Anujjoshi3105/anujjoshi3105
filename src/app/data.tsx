@@ -189,17 +189,17 @@ export const projects = [
           title: 'Hand Gesture Recognition',
           img: '/work1.png',
           desc: 'Trained a Random Forest Classifier, leading to precise recognition of various hand gestures for intuitive and hands-free application control, achieving a recognition accuracy of over 90%',
-          techStack: ['Python', 'MediaPipe', 'Scikit Learn'],
+          techStack: ['Python', 'MediaPipe', 'Scikit-Learn'],
           github: 'https://github.com/Anujjoshi3105/handGesture/',
           link: 'https://github.com/Anujjoshi3105/handGesture/'
         },
         {
-            title: 'Movie Recommender System',
+            title: 'CineMagic: Movie Recommender System',
             img: '/work2.png',
-            desc: 'Trained a Random Forest Classifier, leading to precise recognition of various hand gestures for intuitive and hands-free application control, achieving a recognition accuracy of over 90%',
-            techStack: ['Python', 'MediaPipe', 'Scikit Learn'],
-            github: 'https://github.com/Anujjoshi3105/handGesture/',
-            link: 'https://github.com/Anujjoshi3105/handGesture/'
+            desc: 'Implemented advanced recommendation algorithms to provide personalized movie suggestions based on movie content and similarity, and trends.',
+            techStack: ['Spacy', 'Cinemagoer', 'Scikit-Learn'],
+            github: 'https://github.com/Anujjoshi3105/CineMagic/',
+            link: 'https://github.com/Anujjoshi3105/CineMagic/'
           },
         ]
     },
@@ -209,7 +209,7 @@ export const projects = [
           {
             title: 'LIMSTIR-DTU',
             img: '/work3.png',
-            desc: 'Trained a Random Forest Classifier, leading to precise recognition of various hand gestures for intuitive and hands-free application control, achieving a recognition accuracy of over 90%',
+            desc: '',
             techStack: ['HTML', 'Tailwind-CSS', 'Javascript'],
             github: 'https://github.com/Anujjoshi3105/handGesture/',
             link: 'https://github.com/Anujjoshi3105/handGesture/'
@@ -217,18 +217,18 @@ export const projects = [
           {
               title: 'IRD-DTU',
               img: '/work4.png',
-              desc: 'Trained a Random Forest Classifier, leading to precise recognition of various hand gestures for intuitive and hands-free application control, achieving a recognition accuracy of over 90%',
+              desc: '',
               techStack: ['HTML', 'Tailwind-CSS', 'ReactJS'],
-              github: 'https://github.com/Anujjoshi3105/handGesture/',
-              link: 'https://github.com/Anujjoshi3105/handGesture/'
+              github: 'https://github.com/Anujjoshi3105/IRD-DTU/',
+              link: 'https://ird-dtu.vercel.app/'
             },
             {
                 title: 'Diatomic Technologies',
                 img: '/work5.png',
-                desc: 'Trained a Random Forest Classifier, leading to precise recognition of various hand gestures for intuitive and hands-free application control, achieving a recognition accuracy of over 90%',
+                desc: '',
                 techStack: ['HTML', 'Tailwind-CSS', 'ReactJS'],
-                github: 'https://github.com/Anujjoshi3105/handGesture/',
-                link: 'https://github.com/Anujjoshi3105/handGesture/'
+                github: 'https://diatomictechnologies.vercel.app/',
+                link: 'https://diatomictechnologies.vercel.app/'
               },
           ]
       },

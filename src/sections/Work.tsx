@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { projects } from '@/helper/data';
+import { projects } from '@/app/data';
 import Template from '@/components/Template';
 import WorkCard from '@/components/WorkCard';
 
@@ -12,7 +12,7 @@ const Work = () => {
   return (
     <>
     <Template title="Work" subtitle="My Projects" id="work">
-      <div className="upper gap-2 justify-center w-full flex items-center mb-8">
+      <div className="gap-2 justify-center w-full flex items-center mb-8">
         <div
           className={`link p-1 text-base w-fit sm:px-5 sm:py-2 sm:text-lg font-semibold cursor-pointer transition-all delay-150 ${pIndex === -1 ? 'border-b-2 border-b-theme bg-tertiary' : ''}`}
           onClick={() => setPIndex(-1)}
@@ -30,7 +30,7 @@ const Work = () => {
           </div>
         ))}
       </div>
-      <div className="lower flex justify-start items-start w-full gap-8 flex-wrap">
+      <div className="flex justify-start items-start w-full gap-8 flex-wrap">
         {pIndex === -1
           ? allProjects.map((project, index) => (
               <WorkCard key={index} project={project} />

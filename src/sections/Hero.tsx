@@ -22,23 +22,24 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="h-[75vh] relative grid items-center">
+    <div className="flex md:flex-row-reverse flex-col items-center justify-between gap-4">
       <motion.div 
-        className="z-[-10] hidden lg:block lg:absolute -right-12 lg:w-[600px] lg:h-[600px] object-cover animate-profile rounded-full transition-all border-8 border-primary bg-theme"
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ ease: "easeOut", duration: 2 }}
+        className="lg:max-w-[500px] w-fit h-fit max-h-[500px] object-cover overflow-hidden animate-profile rounded-full transition-all border-8 border-primary bg-theme"
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
       >
-        <Image src="/logo.png" alt="Anuj Joshi" layout="fill" objectFit="cover" />
+        <Image src="/logo.png" alt="Anuj Joshi" width={650} height={500} className='object-fit hover:scale-110 transition-all delay-100 ease-in-out' />
       </motion.div>
-      <div>
+      <div className="flex flex-col w-fit gap-10">
+      <div className='flex flex-col lg:py-16 md:py-10 sm:py-5'>
         <motion.h1
-          className='font-bold text-[2rem] sm:text-[3rem] md:text-6xl'
+          className='text-nowrap font-bold text-[2rem] sm:text-[3rem] md:text-6xl'
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
         >
-          Hi, I&apos;m <span className="text-theme backdrop-blur-3xl">Anuj Joshi</span>
+          Hi, I&apos;m <span className="text-theme backdrop-blur-3xl hover:text-stroke">Anuj Joshi</span>
         </motion.h1>
         <motion.h3
           className='font-[500] text-[1rem] sm:text-[2rem] md:text-2xl mt-2 md:mt-5 animate-typing overflow-hidden whitespace-nowrap'
@@ -63,7 +64,7 @@ const Hero = () => {
         </motion.div>
       </div>
       <motion.div
-        className="absolute bottom-2 sm:bottom-5 flex items-center lg:gap-20 gap-10"
+        className="flex items-center lg:gap-20 gap-10 justify-center hidden sm:block"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut", delay: 0.6 }}
@@ -72,6 +73,7 @@ const Hero = () => {
         <Social title="Twitter" name="@Anujjoshi3105" link="https://x.com/AnujJoshi3105/" icon={FaXTwitter} />
         <Social title="Telegram" name="@Anujjoshi3105" link="https://t.me/anujjoshi3105/" icon={FaTelegram} />
       </motion.div>
+      </div>
     </div>
   );
 }

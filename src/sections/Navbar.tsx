@@ -1,45 +1,63 @@
-'use client'
+'use client';
 
-import Link from "next/link";
-import { FaAlignJustify, FaTimes } from "react-icons/fa";
-import { TbHexagonLetterAFilled } from "react-icons/tb";
-import React, { useEffect, useState, useCallback } from "react";
-import { navLink } from "@/helper/data";
-import { motion } from "framer-motion";
-import Mode from "@/components/Mode"
+import Link from 'next/link';
+import { FaAlignJustify, FaTimes } from 'react-icons/fa';
+import { TbHexagonLetterAFilled } from 'react-icons/tb';
+import React, { useEffect, useState, useCallback } from 'react';
+import { navLink } from '@/app/data';
+import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
+import Mode from '@/components/Mode';
 
 function Navbar() {
   const [responsiveNavVisible, setResponsiveNavVisible] = useState(false);
-  
   const handleLinkClick = useCallback(() => setResponsiveNavVisible(false), []);
-  const handleHtmlClick = useCallback(() => setResponsiveNavVisible(false), []);
 
   useEffect(() => {
-    const links = document.querySelectorAll(".link");
-    links.forEach((link) => link.addEventListener("click", handleLinkClick));
-
-    document.querySelector("html")?.addEventListener("click", handleHtmlClick);
-
+    const handleHtmlClick = () => setResponsiveNavVisible(false);
+    if (responsiveNavVisible) {
+      document.querySelector('html')?.addEventListener('click', handleHtmlClick);
+    } else {
+      document.querySelector('html')?.removeEventListener('click', handleHtmlClick);
+    }
     return () => {
-      links.forEach((link) => link.removeEventListener("click", handleLinkClick));
-      document.querySelector("html")?.removeEventListener("click", handleHtmlClick);
+      document.querySelector('html')?.removeEventListener('click', handleHtmlClick);
     };
-  }, [handleLinkClick, handleHtmlClick]);
-
-  useEffect(() => {
-    const main = document.querySelector("main");
-    if (responsiveNavVisible) main?.classList.add("blur");
-    else main?.classList.remove("blur");
   }, [responsiveNavVisible]);
 
+  useEffect(() => {
+    const main = document.querySelector('main');
+    if (responsiveNavVisible) main?.classList.add('blur');
+    else main?.classList.remove('blur');
+  }, [responsiveNavVisible]);
+
+  const [hidden, setHidden] = useState(false);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    const previous = scrollY.getPrevious() ?? 0;
+    if (latest > previous && latest > 150 && !responsiveNavVisible) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
+
   return (
-    <nav className='min-h-8 lg:px-20 lg:py-6 md:px-12 p-6 sticky top-0 z-50 backdrop-blur-md'>
+    <motion.nav
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: '-100%' },
+      }}
+      animate={hidden ? 'hidden' : 'visible'}
+      transition={{ duration: 0.4, ease: 'easeInOut' }}
+      className="min-h-8 lg:px-20 lg:py-6 md:px-12 p-6 sticky top-0 z-50 backdrop-blur-md"
+    >
       <div className="flex justify-between items-center relative transition-all ease-in-out delay-300">
         <motion.div
           className="logo"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.4, ease: "easeInOut" }}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: 'easeInOut' }}
         >
           <Link href="/" className="logo hover:scale-110 flex justify-center items-center text-3xl md:text-5xl transition-all ease-in-out delay-75 font-bold">
             <TbHexagonLetterAFilled className="text-theme hover:text-primary" />
@@ -49,7 +67,7 @@ function Navbar() {
           className="lg:hidden flex text-2xl md:text-4xl justify-center items-center transition-all delay-300 ease-in-out z-[15] cursor-pointer"
           initial={{ opacity: 0, y: 5 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, ease: "easeInOut" }}
+          transition={{ duration: 0.3, ease: 'easeInOut' }}
           onClick={(e) => {
             e.stopPropagation();
             setResponsiveNavVisible(!responsiveNavVisible);
@@ -57,33 +75,31 @@ function Navbar() {
         >
           {responsiveNavVisible ? <FaTimes /> : <FaAlignJustify />}
         </motion.div>
-        <div className={`${responsiveNavVisible && "nav-responsive"} nav-items flex gap-[3rem] font-semibold`}>
+        <div className={`${responsiveNavVisible && 'nav-responsive'} nav-items flex gap-[3rem] font-semibold`}>
           <ul className="flex lg:flex-row flex-col gap-12 text-center">
             {navLink.map(({ name, link }, index) => (
               <motion.li
                 key={name}
-                className="nav-items-list-item"
                 initial={{ opacity: 0, y: -25 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 + index * 0.1 }}
+                transition={{ duration: 0.3, ease: 'easeInOut', delay: 0.3 + index * 0.1 }}
               >
-                <Link href={link} className="link">
+                <Link href={link} className="link" onClick={handleLinkClick}>
                   {name}
                 </Link>
               </motion.li>
             ))}
             <motion.li
-                className="nav-items-list-item"
-                initial={{ opacity: 0, y: -25 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut", delay: 1 }}
-              >
+              initial={{ opacity: 0, y: -25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, ease: 'easeInOut', delay: 1 }}
+            >
               <Mode />
             </motion.li>
           </ul>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
 

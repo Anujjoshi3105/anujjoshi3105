@@ -1,4 +1,4 @@
-import { skills } from '@/helper/data';
+import { skills } from '@/app/data';
 import Template from '@/components/Template';
 
 const Skill = () => {

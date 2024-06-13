@@ -2,7 +2,7 @@
 import Template from '@/components/Template';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import {experiences} from '@/helper/data'
+import {experiences} from '@/app/data'
 
 const Experience = () => {
   const [selected, setSelected] = useState(0);

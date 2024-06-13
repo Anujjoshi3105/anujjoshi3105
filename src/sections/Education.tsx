@@ -1,6 +1,6 @@
 import EduCard from '@/components/EduCard';
 import Template from '@/components/Template';
-import {education} from '@/helper/data'
+import {education} from '@/app/data'
 
 const Education = () => {
   return (

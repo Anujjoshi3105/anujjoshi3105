@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import type { PluginAPI } from "tailwindcss/types/config";
 
 const config: Config = {
   content: [
@@ -57,7 +58,26 @@ const config: Config = {
       backgroundColor: ['hover', 'focus'],
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }: PluginAPI) {
+      addUtilities({
+        '.text-stroke': {
+          '-webkit-text-stroke-width': '2px',
+          '-webkit-text-stroke-color': 'var(--theme)',
+          '-webkit-text-fill-color': 'transparent',
+        },
+        '::-webkit-scrollbar': {
+          width: '10px',
+          height: '5px',
+          background: 'var(--tertiary)',
+        },
+        '::-webkit-scrollbar-thumb': {
+          background: '#555',
+          borderRadius: '2px',
+        },
+      });
+    },
+  ],
 };
 
 export default config;
