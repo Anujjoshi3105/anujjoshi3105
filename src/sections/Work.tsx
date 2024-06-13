@@ -12,9 +12,9 @@ const Work = () => {
   return (
     <>
     <Template title="Work" subtitle="My Projects" id="work">
-      <div className="gap-2 justify-center w-full flex items-center mb-8">
+      <div className="gap-2 justify-center w-full flex items-center mb-8 overflow-x-hidden">
         <div
-          className={`link p-1 text-base w-fit sm:px-5 sm:py-2 sm:text-lg font-semibold cursor-pointer transition-all delay-150 ${pIndex === -1 ? 'border-b-2 border-b-theme bg-tertiary' : ''}`}
+          className={`link text-nowrap p-1 text-base w-fit sm:px-5 sm:py-2 sm:text-lg font-semibold cursor-pointer transition-all delay-150 ${pIndex === -1 ? 'border-b-2 border-b-theme bg-tertiary' : ''}`}
           onClick={() => setPIndex(-1)}
           key="all"
         >
@@ -22,7 +22,7 @@ const Work = () => {
         </div>
         {projects.map((project, index) => (
           <div
-            className={`link p-1 text-base w-fit sm:px-5 sm:py-2 sm:text-lg font-semibold cursor-pointer transition-all delay-150 ${pIndex === index ? 'border-b-2 border-b-theme bg-tertiary' : ''}`}
+            className={`link text-nowrap p-1 text-base w-fit sm:px-5 sm:py-2 sm:text-lg font-semibold cursor-pointer transition-all delay-150 ${pIndex === index ? 'border-b-2 border-b-theme bg-tertiary' : ''}`}
             onClick={() => setPIndex(index)}
             key={index}
           >

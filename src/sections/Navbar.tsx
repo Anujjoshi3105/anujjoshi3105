@@ -59,12 +59,12 @@ function Navbar() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: 'easeInOut' }}
         >
-          <Link href="/" className="logo hover:scale-110 flex justify-center items-center text-3xl md:text-5xl transition-all ease-in-out delay-75 font-bold">
+          <Link href="/" className="logo hover:scale-110 flex justify-center items-center text-5xl transition-all ease-in-out delay-75 font-bold">
             <TbHexagonLetterAFilled className="text-theme hover:text-primary" />
           </Link>
         </motion.div>
         <motion.div
-          className="lg:hidden flex text-2xl md:text-4xl justify-center items-center transition-all delay-300 ease-in-out z-[15] cursor-pointer"
+          className="lg:hidden flex text-3xl md:text-4xl justify-center items-center transition-all delay-300 ease-in-out z-[15] cursor-pointer"
           initial={{ opacity: 0, y: 5 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
