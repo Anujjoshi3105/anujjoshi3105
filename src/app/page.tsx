@@ -16,7 +16,7 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <main className="lg:mx-[9rem] md:mx-[4rem] sm:m-[4rem] lg:my-[5rem] m-[2.5rem] mx-auto">
+      <main className="lg:mx-[9rem] md:mx-[4rem] sm:ml-[4rem] lg:my-[5rem] m-[2.5rem] mr-0">
         <Hero />
         <About />
         <Experience />
