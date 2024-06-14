@@ -76,7 +76,7 @@ function Navbar() {
         >
           {responsiveNavVisible ? <FaTimes /> : <FaAlignJustify />}
         </motion.div>
-        <div className={`${responsiveNavVisible && 'nav-responsive'} ${!responsiveNavVisible ? 'lg:flex hidden': ''} nav-items flex gap-[3rem] font-semibold transition-all ease-in-out delay-500`}>
+        <div className={`${responsiveNavVisible ?'nav-responsive': 'lg:flex hidden'} nav-items flex gap-[3rem] font-semibold transition-all ease-in-out delay-500`}>
           <ul className="flex lg:flex-row flex-col gap-12 text-center">
             {navLink.map(({ name, link }, index) => (
               <motion.li

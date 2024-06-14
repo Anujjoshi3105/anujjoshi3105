@@ -18,9 +18,12 @@ export const useTheme = () => {
 };
 
 const colors = [
-  '#FF5733', '#1F51FF', '#33FF57', '#FF33A1', '#33A1FF',
-  '#A1FF33', '#FFB833', '#B833FF', '#33FFD7', '#D733FF'
+    '#FF5733', '#1F51FF', '#33FF57', '#FF33A1', '#33A1FF', '#A1FF33', 
+    '#FFB833', '#B833FF', '#33FFD7', '#FFFB33', '#FF33FF', '#33FF99', 
+    '#FFD700', '#7FFF00', '#00FF7F', '#00FFFF', '#FF4500', '#9400D3', 
+    '#FF00FF', '#00FF00', '#00CED1', '#EE82EE', '#DC143C'
 ];
+
 
 interface ThemeProviderProps {
   children: ReactNode;
