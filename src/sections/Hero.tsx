@@ -24,7 +24,7 @@ const Hero = () => {
   return (
     <div className="flex lg:flex-row-reverse flex-col items-center justify-between gap-4">
       <motion.div 
-        className="lg:max-w-[60vw] w-fit h-fit max-h-[70vh] lg:max-h-[80vh] object-cover overflow-hidden whileInView-profile rounded-full transition-all border-8 border-primary bg-theme"
+        className="lg:max-w-[60vw] w-fit h-fit max-h-[70vh] lg:max-h-[80vh] object-cover overflow-hidden animate-profile rounded-full transition-all border-8 border-primary bg-theme"
         initial={{ opacity: 0, scale: 0.6 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
@@ -42,7 +42,7 @@ const Hero = () => {
           Hi, I&apos;m&nbsp;<span className="text-theme backdrop-blur-3xl hover:text-stroke">Anuj Joshi</span>
         </motion.h1>
         <motion.h3
-          className='font-[500] text-[1rem] sm:text-[1.5rem] md:text-2xl mt-2 md:mt-5 whileInView-typing overflow-hidden whitespace-nowrap'
+          className='font-[500] text-[1rem] sm:text-[1.5rem] md:text-2xl mt-2 md:mt-5 animate-typing overflow-hidden whitespace-nowrap'
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeInOut", delay: 0.2 }}
