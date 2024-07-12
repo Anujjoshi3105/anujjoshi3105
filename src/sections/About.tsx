@@ -10,7 +10,7 @@ function About() {
   return (
     <Template title={"About Me"} subtitle={"My Introduction"} id={"about"}>
       <div>
-        <div className="mb-5 justify-center items-center flex-col lg:grid lg:grid-cols-5 lg:gap-5">
+        <div className="mb-5 justify-center items-center flex-col lg:grid lg:grid-cols-5 lg:gap-64">
           <motion.div 
             className="relative w-max h-max group lg:col-span-2 group mb-10"
             initial={{ opacity: 0, x: 0 }}
