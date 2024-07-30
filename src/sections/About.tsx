@@ -33,7 +33,7 @@ function About() {
             </p>
             <p className="md:mr-0 mr-[10%] tracking-[0.08rem] leading-[1.6rem] font-[450]">
               Additionally, I share my knowledge and passion with the world
-              through my <Link href="https://devDiaries.revamp.vercel.app" className="link text-theme" target="_blank">
+              through my <Link href="https://devdiaries3105.vercel.app" className="link text-theme" target="_blank">
               blogs</Link>, where I demonstrate how to build
               full-stack applications.
             </p>
