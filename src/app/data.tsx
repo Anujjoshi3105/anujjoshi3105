@@ -206,6 +206,14 @@ export const projects = [
     {
         header: 'Web Development',
         projects: [
+            {
+                title: 'Dev Diaries',
+                img: '/work6.png',
+                desc: "A blog platform for developers of all levels to share experiences and insights. Features include user authentication (NextAuth.js), CRUD operations for blog posts, comments, likes, shares, and blog & profile image management with Firebase.",
+                techStack: ["Next.js", "Shadcn", "PostgreSQL", "Prisma", "Firebase"],
+                github: 'https://github.com/Anujjoshi3105/devdiaries/',
+                link: 'https://devdiaries3105.vercel.app/'
+              },
           {
             title: 'LIMSTIR-DTU',
             img: '/work3.png',
