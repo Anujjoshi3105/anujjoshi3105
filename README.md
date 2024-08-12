@@ -4,6 +4,10 @@
 🔍 My Specialty: Merging the technical rigor of backend systems with the creativity of frontend development, all while exploring the possibilities of blockchain. Curious about how it all comes together? Let’s connect!<br>  
 📫 Reach out to me: [anujjoshi3105@gmail.com](mailto:anujjoshi3105@gmail.com)<br>
 
+------------------
+[![](https://visitcount.itsvg.in/api?id=Anujjoshi3105&icon=2&color=4)](https://visitcount.itsvg.in)
+-------------------
+
 # 💻 Tech Stack:
 ![C](https://img.shields.io/badge/C-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
@@ -22,9 +26,7 @@
 ### 🔝 Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=Anujjoshi3105&limit=5&theme=tokyonight&combine_all_yearly_contributions=true)
 
----
-[![](https://visitcount.itsvg.in/api?id=Anujjoshi3105&icon=2&color=4)](https://visitcount.itsvg.in)
-------
+
 
 Credit: [Anujjoshi3105](https://github.com/Anujjoshi3105)
 Last Edited on: 12/08/2024
