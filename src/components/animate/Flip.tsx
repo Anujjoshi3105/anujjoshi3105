@@ -1,6 +1,7 @@
 "use client";
+
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, HTMLMotionProps } from "framer-motion";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
@@ -28,7 +29,7 @@ const flipVariants = cva(
 );
 
 export interface FlipProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends Omit<HTMLMotionProps<"div">, keyof VariantProps<typeof flipVariants>>,
     VariantProps<typeof flipVariants> {
   children: string;
 }
