@@ -1,41 +1,92 @@
-'use client';
-import React, { ReactNode } from 'react';
-import { motion } from 'framer-motion';
+"use client";
+
+import React, { ReactNode } from "react";
+import { motion } from "framer-motion";
+
 interface TemplateProps {
   title: string;
   subtitle: string;
-  children: ReactNode;
-  id?: string;
+  children?: ReactNode;
   className?: string;
 }
 
-const Template: React.FC<TemplateProps> = ({ title, subtitle, children, id = '', className = '' }) => {
+const SectionTemplate: React.FC<TemplateProps> = ({
+  title,
+  subtitle,
+  children,
+  className = "",
+}) => {
   return (
-    <section className={`w-full pt-16 ${className}`} id={id}>
+    <section className={`w-full pt-8 ${className}`}>
       <motion.div
-      className="border-l-[2.5px] border-theme px-4 my-16"
-      initial="hidden"
-      whileInView="visible"
-      transition={{ duration: 0.5 }}
-      variants={{
-        visible: { opacity: 1, x: 0 },
-        hidden: { opacity: 0, x: -50 },
-      }}
-    >   <h1 className="text-4xl font-bold mb-2">{title}</h1>
-        <h3 className="font-[500]">{subtitle}</h3>
+        className="border-l-[2.5px] border-theme px-4 my-12 select-none"
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.2 }}
+        variants={{
+          visible: { opacity: 1, x: 0 },
+          hidden: { opacity: 0, x: -50 },
+        }}>
+        <h1 className="text-4xl font-bold mb-2">{title}</h1>
+        <h3 className="font-[500] text-theme">{subtitle}</h3>
       </motion.div>
-      <motion.div className="my-[4rem] px-2 mx-auto"
-      initial="hidden"
-      whileInView="visible"
-      transition={{ duration: 1 }}
-      variants={{
-        visible: { opacity: 1, y: 0},
-        hidden: { opacity: 0, y: 20 },
-      }}>
+      <motion.div
+        className="my-[4rem] px-2 mx-auto"
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.8 }}
+        variants={{
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 80 },
+        }}>
         {children}
       </motion.div>
     </section>
   );
 };
 
-export default Template;
+const PageTemplate: React.FC<TemplateProps> = ({
+  title,
+  subtitle,
+  children,
+  className = "",
+}) => {
+  return (
+    <>
+      {/* Background section */}
+      <div className="absolute -z-10 h-2/5 min-h-[250px] w-screen bg-muted inset-0"></div>
+
+      {/* Content section */}
+      <motion.div
+        className="h-2/5 min-h-[150px] flex flex-col justify-end py-4"
+        initial="hidden"
+        whileInView="visible"
+        transition={{ staggerChildren: 0.2 }}
+        variants={{
+          visible: { opacity: 1 },
+          hidden: { opacity: 0 },
+        }}>
+        <motion.h1
+          className="text-4xl md:text-5xl font-bold mb-1 sm:mb-2"
+          variants={{
+            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, y: -20 },
+          }}
+          transition={{ duration: 0.5 }}>
+          {title}
+        </motion.h1>
+        <motion.h3
+          className="font-[500] text-lg md:text-xl text-theme"
+          variants={{
+            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, y: -20 },
+          }}
+          transition={{ duration: 0.6 }}>
+          {subtitle}
+        </motion.h3>
+      </motion.div>
+    </>
+  );
+};
+
+export { SectionTemplate, PageTemplate };

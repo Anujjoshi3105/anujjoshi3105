@@ -1,34 +1,26 @@
-'use client'
+"use client";
 
-import React, { useState } from 'react';
-import Navbar from '@/sections/Navbar';
-import Hero from '@/sections/Hero';
-import About from '@/sections/About';
-import Education from '@/sections/Education';
-import Experience from '@/sections/Experience';
-import Skill from '@/sections/Skill';
-import Work from '@/sections/Work';
-import Contact from '@/sections/Contact';
-import Testimonial from '@/sections/Testimonial';
-import Footer from '@/sections/Footer';
-import Theme from '@/components/Theme';
+import Hero from "@/sections/Home/Hero";
+import About from "@/sections/About/About";
+import Experience from "@/sections/Home/Experience";
+import Testimonial from "@/sections/Home/Testimonial";
+import Project from "@/sections/Home/Projects";
+import Blog from "@/sections/Home/Blog";
+import { SectionTemplate } from "@/components/Template";
+import Quote from "@/sections/About/Quote";
 
 export default function Page() {
   return (
-    <>
-    <Navbar />
-      <main className="lg:mx-[9rem] md:mx-[4rem] my-[4rem] sm:mx-[2rem] mx-6">
-        <Hero />
+    <main className="space-y-24">
+      <Hero />
+      <SectionTemplate title="About Me" subtitle="My Introduction">
         <About />
-        <Experience />
-        <Education />
-        <Skill />
-        <Work />
-        <Contact />
-        <Testimonial />
-      </main>
-      <Theme />
-      <Footer />
-    </>
+      </SectionTemplate>
+      <Experience />
+      <Project />
+      <Blog />
+      <Quote />
+      <Testimonial />
+    </main>
   );
-};
+}
