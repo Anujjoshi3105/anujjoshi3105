@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   authors: { name: "Anuj Joshi", url: "https://anujjoshi.netlify.app/" },
   creator: "Anuj Joshi",
   openGraph: {
-    title: "Anuj Joshi - Portfolio",
+    title: "%s | Anuj Joshi - Portfolio",
     description: `Explore my portfolio showcasing my skills in web development, AI/ML, and more. Let's collaborate and build something great!`,
     images: [
       {
@@ -55,7 +55,7 @@ export default function RootLayout({
     <ThemeProvider>
       <html lang="en">
         <head>
-          <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+          <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
           <meta
             name="google-site-verification"
             content="a-tlC7lxqKDFcOSkl7QSrELzrggflM2cjPn8ishZQs8"

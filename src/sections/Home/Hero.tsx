@@ -1,43 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Social from "@/components/Social";
+import { HeroSocial } from "@/components/Social";
 import Image from "next/image";
-import { FaPaperPlane, FaLink, FaTelegram, FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaPaperPlane, FaLink } from "react-icons/fa6";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Typewriter from "@/components/animate/Typewriter";
 import { childVariants, containerVariants } from "@/utils/animate";
+import { socialLink, subtitle } from "@/data/data";
 
 const Hero = () => {
-  const subtitle = [
-    "A Fullstack Web3 Developer",
-    "A Problem Solver",
-    "A Machine Learning Enthusiast",
-  ];
-
-  const socialLinks = [
-    {
-      title: "LinkedIn",
-      name: "@Anujjoshi3105",
-      link: "https://www.linkedin.com/in/anujjoshi3105/",
-      icon: FaLinkedinIn,
-    },
-    {
-      title: "Twitter",
-      name: "@Anujjoshi3105",
-      link: "https://x.com/AnujJoshi3105/",
-      icon: FaXTwitter,
-    },
-    {
-      title: "Telegram",
-      name: "@Anujjoshi3105",
-      link: "https://t.me/anujjoshi3105/",
-      icon: FaTelegram,
-    },
-  ];
-
   return (
     <div className="flex lg:flex-row-reverse flex-col items-center justify-between gap-4">
       {/* Profile Image */}
@@ -114,9 +87,9 @@ const Hero = () => {
           initial="hidden"
           whileInView="visible"
           className="flex justify-center items-center lg:gap-20 gap-10">
-          {socialLinks.map(({ title, name, link, icon }) => (
+          {socialLink.map(({ title, name, link, icon }) => (
             <motion.div variants={childVariants} key={title}>
-              <Social title={title} name={name} link={link} icon={icon} />
+              <HeroSocial title={title} name={name} href={link} icon={icon} />
             </motion.div>
           ))}
         </motion.div>

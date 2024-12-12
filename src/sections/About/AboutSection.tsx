@@ -1,13 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FaCode, FaCertificate } from "react-icons/fa";
-import Perk from "@/components/Perk";
 import { childVariants, containerVariants } from "@/utils/animate";
-import { projects } from "@/data";
-import Contest from "./Contest";
+import PerkSection from "@/sections/About/PerkSection";
 
-function About() {
+export default async function AboutSection() {
   return (
     <>
       <motion.div
@@ -75,29 +72,7 @@ function About() {
           </p>
         </motion.div>
       </motion.div>
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        className="grid grid-cols-1 sm:grid-cols-2"
-        variants={containerVariants}>
-        <motion.div variants={childVariants} className="w-full">
-          <Perk
-            value={projects.length}
-            title="Projects Completed"
-            icon={FaCode}
-          />
-        </motion.div>
-        <motion.div variants={childVariants} className="w-full">
-          <Perk
-            value={Number(new Date().getFullYear() - 2022)}
-            title="Years Experience"
-            icon={FaCertificate}
-          />
-        </motion.div>
-      </motion.div>
-      <Contest />
+      <PerkSection />
     </>
   );
 }
-
-export default About;

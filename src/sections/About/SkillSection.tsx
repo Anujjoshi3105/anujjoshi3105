@@ -1,6 +1,6 @@
 "use client";
 
-import { skills } from "@/data";
+import { skills } from "@/data/data";
 import { SectionTemplate } from "@/components/Template";
 import { motion, Variants } from "framer-motion";
 import { childVariants, containerVariants } from "@/utils/animate";
@@ -25,7 +25,7 @@ const SkillItem = ({ skill }: { skill: Skill }) => {
   );
 };
 
-const Skill = () => {
+export default function SkillSection() {
   return (
     <SectionTemplate title="Skills" subtitle="My Abilities">
       <motion.div
@@ -53,6 +53,4 @@ const Skill = () => {
       </motion.div>
     </SectionTemplate>
   );
-};
-
-export default Skill;
+}

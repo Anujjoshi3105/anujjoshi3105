@@ -1,39 +1,61 @@
+import { getAllBlogs } from "@/action/blog";
+import { getAllProjects } from "@/action/project";
 import type { MetadataRoute } from "next";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const currentDate = new Date();
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://anujjoshi.netlify.app/";
 
-  return [
+  const staticPages = [
     {
       url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 1.0,
+      lastModified: new Date().toISOString(),
+      changeFrequency: "monthly" as const,
+      priority: 1,
     },
     {
       url: `${baseUrl}about/`,
-      lastModified: currentDate,
-      changeFrequency: "yearly",
+      lastModified: new Date().toISOString(),
+      changeFrequency: "yearly" as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}project/`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
+      lastModified: new Date().toISOString(),
+      changeFrequency: "monthly" as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}blog/`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
+      lastModified: new Date().toISOString(),
+      changeFrequency: "weekly" as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}contact/`,
-      lastModified: currentDate,
-      changeFrequency: "yearly",
+      lastModified: new Date().toISOString(),
+      changeFrequency: "yearly" as const,
       priority: 0.8,
     },
   ];
+
+  const [allBlogs, allProjects] = await Promise.all([
+    getAllBlogs(),
+    getAllProjects(),
+  ]);
+
+  const blogPostUrls = allBlogs.map((blog) => ({
+    url: `${baseUrl}blog/${blog._id}`,
+    lastModified: blog.updatedAt,
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
+  const projectPostUrls = allProjects.map((project) => ({
+    url: `${baseUrl}project/${project._id}`,
+    lastModified: project.updatedAt,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...blogPostUrls, ...projectPostUrls];
 }

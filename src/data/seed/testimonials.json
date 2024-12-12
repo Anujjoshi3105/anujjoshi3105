@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Rajiv Kapoor",
+    "role": "Professor, DTU",
+    "avatar": "/prof.jpg",
+    "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, ipsum incidunt. Vero temporibus quasi libero voluptatum minima error, sint maiores eaque modi, quam optio ipsa assumenda, molestias aspernatur perspiciatis nobis."
+  },
+  {
+    "name": "Rohan Kumar",
+    "role": "Professor, DTU",
+    "avatar": "/prof.jpg",
+    "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, ipsum incidunt. Vero temporibus quasi libero voluptatum minima error, sint maiores eaque modi, quam optio ipsa assumenda, molestias aspernatur perspiciatis nobis."
+  }
+]

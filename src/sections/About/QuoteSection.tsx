@@ -1,4 +1,4 @@
-export default function Quote() {
+export default function QuoteSection() {
   return (
     <div className="relative max-w-3xl mx-auto aspect-video flex items-center justify-center">
       <span className="bg-theme/30 -z-10 blur-2xl rounded-full dark:blur-[150px] w-80 h-80 absolute animate-spinSlow" />

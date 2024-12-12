@@ -6,10 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seed:import": "ts-node --project tsconfig.seeder.json seeder.ts -i",
+    "seed:destroy": "ts-node --project tsconfig.seeder.json seeder.ts -d"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.3.3",
     "@gsap/react": "^2.1.1",
     "@radix-ui/react-avatar": "^1.1.1",
     "@radix-ui/react-dialog": "^1.1.2",
@@ -18,13 +19,16 @@
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-switch": "^1.1.1",
     "@radix-ui/react-toast": "^1.2.2",
+    "axios": "^1.7.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
+    "dotenv": "^16.4.7",
     "framer-motion": "^11.2.10",
     "gsap": "^3.12.5",
     "lucide-react": "^0.465.0",
-    "next": "14.2.4",
+    "mongoose": "^8.8.4",
+    "next": "^14.2.20",
     "next-themes": "^0.4.3",
     "nodemailer": "^6.9.16",
     "react": "^18",
@@ -32,17 +36,19 @@
     "react-icons": "^5.2.1",
     "react-toastify": "^10.0.5",
     "tailwind-merge": "^2.5.5",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@tailwindcss/typography": "^0.5.15",
+    "@types/node": "^20.17.10",
     "@types/nodemailer": "^6.4.17",
-    "@types/react": "^18",
+    "@types/react": "^18.3.16",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5.7.2"
   }
 }

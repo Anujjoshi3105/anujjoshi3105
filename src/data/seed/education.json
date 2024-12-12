@@ -1,0 +1,41 @@
+[
+  {
+    "grade": "9 CGPA (till 4th Semester)",
+    "institute": "Delhi Technological University",
+    "degree": "B.Tech. in Computer Science",
+    "start": "2022-08-01",
+    "end": "2026-05-31",
+    "place": "Delhi, India",
+    "description": [
+      "Specialized coursework in Data Structures, Algorithms, and Object-Oriented Programming.",
+      "Member of the Society of Robotics, actively participating in technical projects."
+    ],
+    "link": "https://www.dtu.ac.in/"
+  },
+  {
+    "grade": "98.8%",
+    "institute": "Vivekanand International School",
+    "degree": "CBSE Class XII",
+    "start": "2021-04-01",
+    "end": "2022-03-31",
+    "place": "Delhi, India",
+    "description": [
+      "Secured top grades in Mathematics, Physics, and Chemistry.",
+      "School topper with consistent academic excellence."
+    ],
+    "link": "https://vivekanandinternationalschool.com/"
+  },
+  {
+    "grade": "97.0%",
+    "institute": "Vivekanand International School",
+    "degree": "CBSE Class X",
+    "start": "2019-04-01",
+    "end": "2020-03-31",
+    "place": "Delhi, India",
+    "description": [
+      "Excelled in core subjects including Science and Mathematics.",
+      "Awarded for outstanding academic performance."
+    ],
+    "link": "https://vivekanandinternationalschool.com/"
+  }
+]

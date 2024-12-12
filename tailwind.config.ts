@@ -126,6 +126,7 @@ const config: Config = {
       });
     },
     require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
   ],
 };
 

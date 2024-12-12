@@ -83,6 +83,7 @@ const PageTemplate: React.FC<TemplateProps> = ({
           }}
           transition={{ duration: 0.6 }}>
           {subtitle}
+          {children}
         </motion.h3>
       </motion.div>
     </>

@@ -1,0 +1,30 @@
+[
+  {
+    "company": "USIP-DTU",
+    "role": "Full Stack Developer",
+    "link": "https://www.dtu.ac.in/",
+    "start": "10 February, 2024",
+    "end": "10 April, 2024",
+    "place": "Delhi, India",
+    "description": [
+      "An intern at the Industrial & Research Unit, Delhi Technological University",
+      "I was responsible for developing an ERP portal, designed to manage government-funded projects for DTU professors, students, etc",
+      "The ERP solution enabled efficient allocation of resources, timely financial reporting, and systematic tracking of project milestones, significantly improving operational efficiency at DTU."
+    ],
+    "skills": ["react", "node", "php"]
+  },
+  {
+    "company": "ITP Electronics",
+    "role": "Software Developer Intern",
+    "link": "https://www.itpelectronics.com/",
+    "start": "20 May, 2024",
+    "end": "12 July, 2024",
+    "place": "Delhi, India",
+    "description": [
+      "Worked on the research and development of Wire Harness Detection and Image to Bill of Material projects.",
+      "Contributed to the automation of Wire Harness Detection processes, enhancing precision and reducing manual effort.",
+      "Developed solutions to generate Bills of Material from images, integrating computer vision techniques with backend automation."
+    ],
+    "skills": ["python", "opencv", "machine learning", "automation"]
+  }
+]

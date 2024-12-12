@@ -1,13 +1,31 @@
 "use client";
 import { SectionTemplate } from "@/components/Template";
-import { projects } from "@/data";
-import React, { useRef } from "react";
+import blogs from "@/data/seed/blogs.json";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import BlogCard from "@/components/BlogCard";
 import { Skeleton } from "@/components/ui/skeleton";
 
-export default function Blog() {
+export default function BlogSection() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [allBlogs, setAllBlogs] = useState<Blog[]>(blogs);
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const res = await fetch(`/api/blog`);
+        if (!res.ok) {
+          console.log("Failed to fetch blog data");
+        } else {
+          const data = await res.json();
+          setAllBlogs(data.data);
+        }
+      } catch (error) {
+        console.error("An error occurred while fetching blog data:", error);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
@@ -26,10 +44,10 @@ export default function Blog() {
           ref={scrollContainerRef}
           className="flex overflow-x-auto space-x-4 mx-14 scrollbar-hide"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
-          {projects.map((project) => (
-            <div key={project.title} className="flex-shrink-0 w-[300px]">
+          {allBlogs.map((blog) => (
+            <div key={blog.title} className="flex-shrink-0 w-[350px]">
               {/*<Skeleton className="my-2 h-[350px] mx-auto" /> */}
-              <BlogCard blog={project} />
+              <BlogCard blog={blog} />
             </div>
           ))}
         </div>

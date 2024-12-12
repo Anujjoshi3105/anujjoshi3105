@@ -1,26 +1,26 @@
 "use client";
 
 import Hero from "@/sections/Home/Hero";
-import About from "@/sections/About/About";
-import Experience from "@/sections/Home/Experience";
-import Testimonial from "@/sections/Home/Testimonial";
-import Project from "@/sections/Home/Projects";
-import Blog from "@/sections/Home/Blog";
+import AboutSection from "@/sections/About/AboutSection";
+import ExperienceSection from "@/sections/Home/ExperienceSection";
+import TestimonialSection from "@/sections/Home/TestimonialSection";
+import ProjectSection from "@/sections/Home/ProjectSection";
+import BlogSection from "@/sections/Home/BlogSection";
 import { SectionTemplate } from "@/components/Template";
-import Quote from "@/sections/About/Quote";
+import QuoteSection from "@/sections/About/QuoteSection";
 
 export default function Page() {
   return (
     <main className="space-y-24">
       <Hero />
       <SectionTemplate title="About Me" subtitle="My Introduction">
-        <About />
+        <AboutSection />
       </SectionTemplate>
-      <Experience />
-      <Project />
-      <Blog />
-      <Quote />
-      <Testimonial />
+      <ExperienceSection />
+      <ProjectSection />
+      <BlogSection />
+      <QuoteSection />
+      <TestimonialSection />
     </main>
   );
 }

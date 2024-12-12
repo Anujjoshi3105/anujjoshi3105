@@ -2,6 +2,7 @@
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { SocialLink } from "@/components/Social";
 
 export default function ContactInfo() {
   return (
@@ -20,29 +21,30 @@ export default function ContactInfo() {
         amazing together.
       </p>
       <div className="flex flex-col gap-4 md:gap-6">
-        <a href="tel:9811184995" className="hover:-translate-y-1 duration-150">
-          <div className="font-semibold">Contact</div>
-          <div className="flex gap-2 items-center">
-            <FaPhoneAlt className="text-theme" />
-            <span className="link">+91 981-11X-XXXX</span>
-          </div>
-        </a>
-        <a
-          href="mailto:anujjoshi3105@gmail.com"
-          className="hover:-translate-y-1 duration-150">
-          <div className="font-semibold">Email</div>
-          <div className="flex gap-2 items-center">
-            <FaEnvelope className="text-theme" />
-            <span className="link">anujjoshi3105@gmail.com</span>
-          </div>
-        </a>
-        <a href="#" className="hover:-translate-y-1 duration-150">
-          <div className="font-semibold">Location</div>
-          <div className="flex gap-2 items-center">
-            <FaMapMarkerAlt className="text-theme" />
-            <span className="link">New Delhi, India</span>
-          </div>
-        </a>
+        <div className="hover:-translate-y-1 duration-150">
+          <p className="font-semibold">Contact</p>
+          <SocialLink
+            title="+91 981118 XXXX"
+            href="tel:9811184995"
+            icon={FaPhoneAlt}
+          />
+        </div>
+        <div className="hover:-translate-y-1 duration-150">
+          <p className="font-semibold">Email</p>
+          <SocialLink
+            title="anujjoshi3105@gmail.com"
+            href="#"
+            icon={FaEnvelope}
+          />
+        </div>
+        <div className="hover:-translate-y-1 duration-150">
+          <p className="font-semibold">Location</p>
+          <SocialLink
+            title="New Delhi, India"
+            href="https://www.google.com/maps/d/u/0/viewer?ie=UTF&msa=0&mid=1ugPBH9-MCw7w7lSrdNWcjO9_y7M&ll=28.577502328473237%2C77.171527&z=12"
+            icon={FaMapMarkerAlt}
+          />
+        </div>
       </div>
     </motion.div>
   );

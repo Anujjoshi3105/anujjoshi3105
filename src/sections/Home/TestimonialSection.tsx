@@ -2,15 +2,15 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
-import { testimonialData } from "@/data";
+import testimonials from "@/data/seed/testimonials.json";
 import { SectionTemplate } from "@/components/Template";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const TestimonialCard = ({
-  review,
+  testimonial,
   isVisible,
 }: {
-  review: Review;
+  testimonial: Testimonial;
   isVisible: boolean;
 }) => {
   return (
@@ -24,37 +24,54 @@ const TestimonialCard = ({
         } before:absolute before:bg-muted before:w-6 before:h-6 before:rotate-45 before:-bottom-2 before:left-2/4 before:-tranbackground-x-2/4 before:-z-10 before:transition before:duration-500 before:delay-500 ${
           isVisible ? "before:tranbackground-y-0" : "before:-tranbackground-y-4"
         }`}>
-        {review.review}
+        {testimonial.review}
       </blockquote>
       <div
         className={`text-sm flex flex-col items-center gap-2 mt-6 transition-all duration-500 ${
           isVisible ? "tranbackground-y-0" : "tranbackground-y-[150px]"
         }`}>
         <Avatar className="w-12 h-12">
-          <AvatarImage src={review.avatar} alt={review.name} />
-          <AvatarFallback>{review.name[0]}</AvatarFallback>
+          <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+          <AvatarFallback>{testimonial.name[0]}</AvatarFallback>
         </Avatar>
         <div>
-          <p className="font-bold capitalize">{review.name}</p>
-          <p className="text-xs">{review.role}</p>
+          <p className="font-bold capitalize">{testimonial.name}</p>
+          <p className="text-xs">{testimonial.role}</p>
         </div>
       </div>
     </div>
   );
 };
 
-const Testimonial = () => {
+export default function TestimonialSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [testimonialData, setTestimonialData] =
+    useState<Testimonial[]>(testimonials);
+  useEffect(() => {
+    async function fetchTestimonialData() {
+      const response = await fetch("/api/testimonial");
+      if (response.status == 404) {
+        console.log("Testimonial data not found");
+        return;
+      }
+      if (response.status !== 200) {
+        console.log("Error fetching testimonial data");
+        return;
+      }
+      const data = await response.json();
+      setTestimonialData(data.data as Testimonial[]);
+    }
+    fetchTestimonialData();
+  }, []);
 
   const handlePrev = useCallback(() => {
     setCurrentIndex(
-      (prevIndex) =>
-        (prevIndex - 1 + testimonialData.length) % testimonialData.length
+      (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
     );
   }, [setCurrentIndex]);
 
   const handleNext = useCallback(() => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonialData.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
   }, [setCurrentIndex]);
 
   useEffect(() => {
@@ -78,10 +95,10 @@ const Testimonial = () => {
         </button>
         <div>
           <div className="grid overflow-hidden">
-            {testimonialData.map((review, idx) => (
+            {testimonials.map((testimonial, idx) => (
               <TestimonialCard
-                key={review.name}
-                review={review}
+                key={testimonial.name}
+                testimonial={testimonial}
                 isVisible={idx === currentIndex}
               />
             ))}
@@ -95,6 +112,4 @@ const Testimonial = () => {
       </div>
     </SectionTemplate>
   );
-};
-
-export default Testimonial;
+}

@@ -1,9 +1,9 @@
 "use client";
-import Education from "@/sections/About/Education";
-import Skill from "@/sections/About/Skill";
-import About from "@/sections/About/About";
-import Experience from "@/sections/Home/Experience";
-import Quote from "@/sections/About/Quote";
+import EducationSection from "@/sections/About/EducationSection";
+import SkillSection from "@/sections/About/SkillSection";
+import AboutSection from "@/sections/About/AboutSection";
+import ExperienceSection from "@/sections/Home/ExperienceSection";
+import QuoteSection from "@/sections/About/QuoteSection";
 import { PageTemplate } from "@/components/Template";
 
 export default function Page() {
@@ -11,12 +11,12 @@ export default function Page() {
     <>
       <PageTemplate title="About" subtitle="My Introduction" />
       <div className="my-12">
-        <About />
+        <AboutSection />
       </div>
-      <Education />
-      <Skill />
-      <Experience />
-      <Quote />
+      <EducationSection />
+      <SkillSection />
+      <ExperienceSection />
+      <QuoteSection />
     </>
   );
 }

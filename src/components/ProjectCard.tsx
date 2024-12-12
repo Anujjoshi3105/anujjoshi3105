@@ -39,7 +39,7 @@ const ProjectCard = ({
         <div className="flex flex-wrap gap-2 my-2">{tagsList}</div>
         <p className="my-4 text-sm line-clamp-4">{project.description}</p>
         <Link
-          href={`/project/${project.id}`}
+          href={`/project/${project._id}`}
           className="text-sm hover:underline underline-offset-2">
           <Button size="sm" className="w-fit">
             Learn more &nbsp;&gt;

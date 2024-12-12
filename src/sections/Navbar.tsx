@@ -9,11 +9,11 @@ import {
   useScroll,
 } from "framer-motion";
 import Link from "next/link";
-import { navLinks, socialLinks } from "@/data";
+import { navLinks, socialLinks } from "@/data/data";
 import { TbHexagonLetterAFilled } from "react-icons/tb";
 import Mode from "@/components/Mode";
 import Theme from "@/components/Theme";
-import SocialIcon from "@/components/SocialIcon";
+import { SocialIcon } from "@/components/Social";
 import { containerVars, menuVars, mobileLinkVars } from "@/utils/animate";
 
 export default function Navbar() {
