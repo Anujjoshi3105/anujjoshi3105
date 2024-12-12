@@ -4,7 +4,7 @@ import ExperienceModel from "@/models/ExperienceModel";
 export async function GET(request: Request) {
   try {
     const mongoose = await connectDB();
-    const data = await ExperienceModel.find();
+    const data = await ExperienceModel.find().sort({ end: -1 });
 
     if (data.length === 0) {
       return new Response(JSON.stringify({ error: "No data found" }), {

@@ -82,7 +82,7 @@ export default function ProjectContent({ project }: { project: Project }) {
 
 const ProgressBar = ({ scaleX }: { scaleX: any }) => (
   <motion.div
-    className="fixed bottom-0 left-0 right-0 h-1 bg-primary z-50"
+    className="fixed bottom-0 left-0 right-0 h-1 bg-theme z-50"
     style={{ scaleX, transformOrigin: "0%" }}
   />
 );

@@ -54,7 +54,7 @@ export default function ExperienceSection() {
             </li>
           ))}
         </ul>
-        <div className="h-max">
+        <div className="h-max duration-200">
           <div className="md:flex justify-between items-center">
             <h3 className="font-semibold text-xl text-theme">
               {selectedExperience?.role}

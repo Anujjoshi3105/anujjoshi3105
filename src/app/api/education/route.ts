@@ -4,7 +4,7 @@ import EducationModel from "@/models/EducationModel";
 export async function GET(request: Request) {
   try {
     const mongoose = await connectDB();
-    const data = await EducationModel.find();
+    const data = await EducationModel.find().sort({ end: -1 });
     if (data.length === 0) {
       return new Response(JSON.stringify({ error: "No data found" }), {
         status: 404,

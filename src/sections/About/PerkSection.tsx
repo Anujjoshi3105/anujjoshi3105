@@ -7,6 +7,7 @@ import { getTotalProjects } from "@/action/project";
 import Perk from "@/components/Perk";
 import { Skeleton } from "@/components/ui/skeleton";
 import { perkData } from "@/data/data";
+import { childVariants, containerVariants } from "@/utils/animate";
 
 export default function PerkSection() {
   const [ratings, setRatings] = useState<{ [key: string]: any }>({});
@@ -59,10 +60,11 @@ export default function PerkSection() {
   }, [loading, ratings]);
 
   return (
-    <div className="space-y-4">
+    <>
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial="hidden"
+        whileInView="visible"
+        variants={containerVariants}
         className="grid grid-cols-1 sm:grid-cols-2 gap-1">
         {loading ? (
           <>
@@ -85,11 +87,12 @@ export default function PerkSection() {
         )}
       </motion.div>
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
         className="grid sm:grid-cols-2 lg:grid-cols-4 gap-1">
         {renderPerkItems}
       </motion.div>
-    </div>
+    </>
   );
 }

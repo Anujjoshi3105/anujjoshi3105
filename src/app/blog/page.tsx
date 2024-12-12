@@ -68,7 +68,7 @@ const Page = () => {
   );
 
   const memoizedBlogCards = useMemo(() => {
-    return blogs.length !== 0 ? (
+    return blogs.length === 0 ? (
       <div className="flex h-[80vh] w-full font-extrabold opacity-40 select-none items-center justify-center text-center text-2xl md:text-5xl">
         NO SUCH CONTENT FOUND
       </div>

@@ -91,6 +91,12 @@ const config: Config = {
           "0%": { left: "200%" },
           "100%": { left: "-200%", opacity: "0" },
         },
+        quote: {
+          "0%": { transform: "translate(0px, 0px)" },
+          "33%": { transform: "translate(50px, 0px)" },
+          "66%": { transform: "translate(-50px, 0px)" },
+          "100%": { transform: "translate(0px, 0px)" },
+        },
       },
       animation: {
         speeder: "speeder 0.4s linear infinite",
@@ -98,6 +104,7 @@ const config: Config = {
         spinSlow: "spin 5s linear infinite",
         animateIcon: "animateIcon 0.5s ease-in-out infinite",
         profile: "profile 8s ease-in-out infinite 1s",
+        quote: "quote 8s infinite",
       },
       borderRadius: {
         lg: "var(--radius)",

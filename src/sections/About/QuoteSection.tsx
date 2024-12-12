@@ -1,9 +1,9 @@
 export default function QuoteSection() {
   return (
     <div className="relative max-w-3xl mx-auto aspect-video flex items-center justify-center">
-      <span className="bg-theme/30 -z-10 blur-2xl rounded-full dark:blur-[150px] w-80 h-80 absolute animate-spinSlow" />
+      <span className="animate-quote bg-theme/30 -z-10 blur-2xl rounded-full dark:blur-[150px] w-80 h-80 absolute" />
       <div className="text-center space-y-8">
-        <div className="space-y-4 text-2xl sm:text-3xl md:text-4xl text-balance">
+        <div className="space-y-4 text-2xl sm:text-3xl md:text-4xl text-balance backdrop-blur-sm">
           <p>
             You don&apos;t learn to walk by&nbsp;
             <span className="text-theme font-semibold">following rules</span>
