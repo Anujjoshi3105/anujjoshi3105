@@ -28,16 +28,12 @@ const Page = () => {
       const res = await fetch(`/api/blog?${params.toString()}`);
       if (!res.ok) {
         setBlogs([]);
-        console.log("Failed to fetch blog data");
       } else {
         const data = await res.json();
         setBlogs(data.data);
       }
       const tagRes = await fetch("/api/tags");
-      console.log(tagRes.json());
-      if (!tagRes.ok) {
-        console.log("Error fetching tags");
-      } else {
+      if (tagRes.ok) {
         const tagData = await tagRes.json();
         setAllTags(tagData.data || []);
       }

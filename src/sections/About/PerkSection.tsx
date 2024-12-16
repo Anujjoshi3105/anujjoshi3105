@@ -7,7 +7,7 @@ import { getTotalProjects } from "@/action/project";
 import Perk from "@/components/Perk";
 import { Skeleton } from "@/components/ui/skeleton";
 import { perkData } from "@/data/data";
-import { childVariants, containerVariants } from "@/utils/animate";
+import { containerVariants } from "@/utils/animate";
 
 export default function PerkSection() {
   const [ratings, setRatings] = useState<{ [key: string]: any }>({});
@@ -45,7 +45,7 @@ export default function PerkSection() {
   const renderPerkItems = useMemo(() => {
     return perkData.map(({ platform, icon, link }) =>
       loading ? (
-        <Skeleton key={platform} className="h-24 w-full m-1" />
+        <Skeleton key={platform} className="h-24 w-full m-2" />
       ) : (
         <Perk
           key={platform}
@@ -65,11 +65,11 @@ export default function PerkSection() {
         initial="hidden"
         whileInView="visible"
         variants={containerVariants}
-        className="grid grid-cols-1 sm:grid-cols-2 gap-1">
+        className="grid grid-cols-1 sm:grid-cols-2">
         {loading ? (
           <>
-            <Skeleton className="h-24 w-full" />
-            <Skeleton className="h-24 w-full" />
+            <Skeleton className="h-24 w-full m-2" />
+            <Skeleton className="h-24 w-full m-2" />
           </>
         ) : (
           <>
@@ -90,7 +90,7 @@ export default function PerkSection() {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        className="grid sm:grid-cols-2 lg:grid-cols-4 gap-1">
+        className="grid sm:grid-cols-2 lg:grid-cols-4">
         {renderPerkItems}
       </motion.div>
     </>

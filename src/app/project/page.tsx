@@ -27,6 +27,7 @@ export default function Page() {
       const data = await res.json();
       setProjectData(data.data as Project[]);
     }
+    fetchProjectData();
   }, []);
   return (
     <>

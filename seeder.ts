@@ -22,7 +22,7 @@ mongoose
   })
   .catch((error) => {
     console.error("Error connecting to MongoDB:", error);
-    process.exit(1); // Exit process with failure code
+    process.exit(1);
   });
 
 const importData = async () => {
@@ -68,6 +68,7 @@ const importData = async () => {
     }
 
     console.log("All data imported successfully.");
+    process.exit(0);
   } catch (error) {
     console.error("Error during data import:", error);
     process.exit(1);
@@ -87,6 +88,7 @@ const deleteData = async () => {
     await TestimonialModel.deleteMany({});
     console.log("Testimonial data deleted successfully.");
     console.log("All Data deleted successfully.");
+    process.exit(0);
   } catch (error) {
     console.error("Error during data deletion:", error);
     process.exit(1);

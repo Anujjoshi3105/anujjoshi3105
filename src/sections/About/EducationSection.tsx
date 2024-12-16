@@ -85,17 +85,16 @@ export default function EducationSection() {
       const data = await res.json();
       setEducationData(data.data as Education[]);
     }
-
     fetchEducationData();
   }, []);
 
   return (
-    <SectionTemplate title="Education" subtitle="My education">
+    <SectionTemplate title="Education" subtitle="My Qualifications">
       <div ref={ref} className="space-y-20 relative">
-        <div className="absolute inset-0 ml-5 -translate-x-1 md:mx-auto md:translate-x-0 translate-y-16 h-[75%] w-1 bg-foreground" />
+        <div className="absolute inset-0 ml-5 -translate-x-1 md:mx-auto md:translate-x-0 translate-y-16 h-[74%] w-1 bg-foreground" />
         <motion.div
           style={{ height: bgHeight }}
-          className="absolute inset-0 ml-5 -translate-x-1 md:mx-auto md:translate-x-0 -translate-y-2 max-h-[75%] w-1 bg-theme"
+          className="absolute inset-0 ml-5 -translate-x-1 md:mx-auto md:translate-x-0 -translate-y-2 max-h-[74%] w-1 bg-theme"
         />
         {educationData.map((edu, index) => (
           <EduCard {...edu} key={index} />

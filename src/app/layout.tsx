@@ -41,8 +41,8 @@ export const metadata: Metadata = {
     title: "Anuj Joshi - Portfolio",
     description: `Explore my portfolio to discover my skills, projects, and passion for technology. Join me in creating the future of innovation.`,
     images: "https://anujjoshi.netlify.app/logo.png",
-    creator: "@AnujJoshi",
-    site: "@AnujJoshi",
+    creator: "@anujjoshi3105",
+    site: "@anujjoshi3105",
   },
 };
 
@@ -61,8 +61,10 @@ export default function RootLayout({
             content="a-tlC7lxqKDFcOSkl7QSrELzrggflM2cjPn8ishZQs8"
           />
         </head>
-        <body className={`overflow-x-hidden ${poppins.className}`}>
-          <DarkProvider attribute="class" defaultTheme="system">
+        <body
+          className={`overflow-x-hidden ${poppins.className}`}
+          suppressHydrationWarning>
+          <DarkProvider attribute="class" defaultTheme="dark">
             <Navbar />
             <main className="lg:mx-[8rem] md:mx-[4rem] my-[3rem] sm:mx-[2rem] mx-6">
               {children}
