@@ -18,7 +18,7 @@ const BlogCard = ({ blog }: { blog: Blog }) => (
     </div>
     <div className="flex flex-col h-[200px] p-4 font-roboto">
       <h2 className="font-semibold">{blog.title}</h2>
-      <div className="space-x-1 mb-4 mt-1 h-6 overflow-hidden">
+      <div className="space-x-1 mb-4 mt-1 line-clamp-1 overflow-hidden">
         {blog.tags.map((tech, index) => (
           <Badge key={index}>{tech}</Badge>
         ))}

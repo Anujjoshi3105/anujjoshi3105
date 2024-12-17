@@ -30,9 +30,7 @@ export default function Navbar() {
     }
   });
 
-  const toggleMenu = () => {
-    setOpen((prevOpen) => !prevOpen);
-  };
+  const toggleMenu = () => setOpen((prevOpen) => !prevOpen);
   const closeMenu = () => setOpen(false);
 
   return (
