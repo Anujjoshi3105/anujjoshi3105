@@ -49,16 +49,15 @@ const PageTemplate: React.FC<TemplateProps> = ({
   title,
   subtitle,
   children,
-  className = "",
 }) => {
   return (
     <>
       {/* Background section */}
-      <div className="absolute -z-10 h-2/5 min-h-[250px] w-screen bg-muted inset-0"></div>
+      <div className="absolute -z-10 h-2/5 min-h-[280px] w-screen bg-muted inset-0"></div>
 
       {/* Content section */}
       <motion.div
-        className="h-2/5 min-h-[150px] flex flex-col justify-end py-4"
+        className="h-2/5 min-h-[140px] flex flex-col justify-end py-4"
         initial="hidden"
         whileInView="visible"
         transition={{ staggerChildren: 0.2 }}

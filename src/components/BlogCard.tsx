@@ -1,12 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { Badge } from "./ui/badge";
-import { formatDate } from "@/utils/date";
+import { timeAgo } from "@/lib/utils";
 
 const BlogCard = ({ blog }: { blog: Blog }) => (
   <Link
     href={`/blog/${blog._id}`}
-    className="group shadow-md hover:shadow-theme/40 bg-muted rounded-md overflow-hidden transition-transform duration-150 hover:-translate-y-2 brightness-125 flex flex-col h-[350px]">
+    className="group shadow-md hover:shadow-theme bg-muted rounded-md overflow-hidden transition-transform duration-150 hover:-translate-y-2 brightness-125 flex flex-col h-[350px]">
     <div className="h-[200px] overflow-hidden relative">
       <Image
         src={blog.img}
@@ -25,7 +25,8 @@ const BlogCard = ({ blog }: { blog: Blog }) => (
       </div>
       <p className="text-sm opacity-70 font-mono overflow-hidden text-ellipsis line-clamp-3">
         <span className="text-theme text-xs">
-          {formatDate(blog.createdAt)}&nbsp;|&nbsp;
+          {timeAgo(blog.createdAt as unknown as Date, { withAgo: true })}
+          &nbsp;|&nbsp;
         </span>
         {blog.description}
       </p>

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, useMemo, forwardRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useSpring } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const sections = [
   "problem",
@@ -90,26 +91,28 @@ const ProgressBar = ({ scaleX }: { scaleX: any }) => (
 const ProjectSection = forwardRef<
   HTMLElement,
   { section: Section; content: string | string[] | undefined }
->(({ section, content }, ref) => (
-  <section id={section} ref={ref} className="mb-8">
-    <h2 className="text-3xl font-bold capitalize mb-4">{section}</h2>
-    {Array.isArray(content) ? (
-      <ul className="pl-4">
-        {content.map((item, idx) => (
-          <motion.li
-            key={idx}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="custom-bullet"
-            transition={{ duration: 0.3, delay: idx * 0.1 }}>
-            {item}
-          </motion.li>
-        ))}
-      </ul>
-    ) : (
-      <p>{content}</p>
-    )}
-  </section>
-));
-
+>(({ section, content }, ref) => {
+  const t = useTranslations("project");
+  return (
+    <section id={section} ref={ref} className="mb-8">
+      <h2 className="text-3xl font-bold capitalize mb-4">{t(section)}</h2>
+      {Array.isArray(content) ? (
+        <ul className="pl-4">
+          {content.map((item, idx) => (
+            <motion.li
+              key={idx}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="custom-bullet"
+              transition={{ duration: 0.3, delay: idx * 0.1 }}>
+              {item}
+            </motion.li>
+          ))}
+        </ul>
+      ) : (
+        <p>{content}</p>
+      )}
+    </section>
+  );
+});
 ProjectSection.displayName = "ProjectSection";

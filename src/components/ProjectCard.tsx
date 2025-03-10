@@ -1,8 +1,9 @@
 import { FaGithub, FaGlobe } from "react-icons/fa";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "./ui/button";
+import { useTranslations } from "next-intl";
 
 const ProjectCard = ({
   project,
@@ -11,6 +12,7 @@ const ProjectCard = ({
   project: Project;
   size?: boolean;
 }) => {
+  const t = useTranslations("project");
   const tagsList = project.tags.map((tech, index) => (
     <Badge key={index}>{tech}</Badge>
   ));
@@ -42,7 +44,7 @@ const ProjectCard = ({
           href={`/project/${project._id}`}
           className="text-sm hover:underline underline-offset-2">
           <Button size="sm" className="w-fit">
-            Learn more &nbsp;&gt;
+            {t("learnMore")} &nbsp;&gt;
           </Button>
         </Link>
       </div>

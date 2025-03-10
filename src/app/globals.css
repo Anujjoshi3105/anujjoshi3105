@@ -46,6 +46,10 @@
   backdrop-filter: blur(5px);
 }
 
+.bar {
+  background-color: hsl(var(--theme));
+}
+
 @layer base {
   :root {
     --theme: 131 100% 60%;

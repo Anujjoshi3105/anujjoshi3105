@@ -34,6 +34,10 @@ declare global {
     rating: number;
     level: string;
   };
+  type PerkRating = {
+    rating: string | number;
+    level: string;
+  };
   type Project = {
     _id: string;
     title: string;

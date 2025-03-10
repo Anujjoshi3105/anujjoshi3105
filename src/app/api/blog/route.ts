@@ -1,5 +1,5 @@
 import { connectDB } from "@/lib/db";
-import BlogModel from "@/models/BlogModel";
+import BlogModel from "@/lib/models/blog.model";
 
 export async function GET(request: Request) {
   const searchParams = new URL(request.url);
@@ -7,7 +7,7 @@ export async function GET(request: Request) {
   const id = searchParams.searchParams.get("id");
   const title = searchParams.searchParams.get("title");
   const description = searchParams.searchParams.get("description");
-  const search = searchParams.searchParams.get("search");
+  const search = searchParams.searchParams.get("q");
   const limit = parseInt(searchParams.searchParams.get("limit") || "10", 10);
 
   const filter: Record<string, any> = {};

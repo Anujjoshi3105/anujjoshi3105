@@ -1,0 +1,440 @@
+{
+  "LocaleLayout": {
+    "title": "Anuj Joshi - Portfolio",
+    "description": "I'm Anuj Joshi, a passionate learner and tech enthusiast with a deep interest in web development, AI/ML, and web3 technologies. I enjoy applying my skills to solve real-world problems through innovative projects. My journey has been shaped by continuous learning, collaborative projects, and a commitment to making a positive impact in the tech community.",
+    "keywords": "Anuj Joshi, Computer Science Engineer, DTU, Web Development, AI, ML, Web3, Robotics, Software Engineering, Machine Learning, Resume, Hire Me, Technical Blog, Portfolio, Society of Robotics, LIMSTIR, Full Stack Developer, Data Science, Deep Learning, ReactJS, JavaScript, Python, CSE, Web3 Developer",
+    "openGraphTitle": "%s | Anuj Joshi - Portfolio",
+    "openGraphDescription": "Explore my portfolio showcasing my skills in web development, AI/ML, and more. Let's collaborate and build something great!",
+    "twitterTitle": "Anuj Joshi - Portfolio",
+    "twitterDescription": "Explore my portfolio to discover my skills, projects, and passion for technology. Join me in creating the future of innovation."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "project": "Project",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "global": {
+    "name": "Anuj Joshi",
+    "dark": "Dark Mode",
+    "light": "Light Mode",
+    "language": "Language",
+    "theme": "Change Theme",
+    "color": {
+      "red": "Red",
+      "blue": "Blue",
+      "green": "Green",
+      "pink": "Pink",
+      "orange": "Orange",
+      "purple": "Purple",
+      "lime": "Lime",
+      "magenta": "Magenta",
+      "yellow": "Yellow",
+      "cyan": "Cyan"
+    },
+    "footer": "All rights are reserved by"
+  },
+  "hero": {
+    "name": "Anuj Joshi",
+    "title": "Hi, I'm",
+    "contactMe": "Contact Me",
+    "resume": "Resume",
+    "fullStack": "A Full Stack Developer",
+    "machineLearning": "A Machine Learning Enthusiast",
+    "LinkedIn": "LinkedIn",
+    "Twitter": "Twitter",
+    "Telegram": "Telegram"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "My Introduction",
+    "content": "<p>Hello! My name is Anuj Joshi, and I am a passionate software engineer with a keen interest in Web Development and Machine Learning.</p><p>At <a>LIMSTIR-DTU</a> and as a member of the Robotic Society at <a>SR-DTU</a>, I strive to craft sustainable solutions for global challenges.</p><p>Additionally, I share my knowledge and passion with the world through my <a>blogs</a>, where I demonstrate how to build full-stack applications.</p><p>Currently, I'm leading a project called <a>Smith Story</a>, an LLM model aimed at crafting stories with images. Join me in this exciting endeavor to contribute to cutting-edge storytelling technology!</p>",
+    "urls": {
+      "LIMSTIR-DTU": "https://limstir-dtu.vercel.app",
+      "SR-DTU": "https://srdtu-revamp.vercel.app",
+      "blogs": "https://bitlog.vercel.app",
+      "Smith Story": "https://fictora.vercel.app"
+    }
+  },
+  "perk": {
+    "project": "Projects Completed",
+    "experience": "Years Experience"
+  },
+  "skill": {
+    "title": "My Skills",
+    "subtitle": "My Abilities"
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "Where I've worked",
+    "entries": [
+      {
+        "company": "USIP-DTU",
+        "role": "Full Stack Developer",
+        "link": "https://www.dtu.ac.in/",
+        "start": "10 February, 2024",
+        "end": "10 April, 2024",
+        "place": "Delhi, India",
+        "description": [
+          "Un pasante en la Unidad de Investigación y Desarrollo Industrial de la Universidad Tecnológica de Delhi",
+          "I was responsible for developing an ERP portal, designed to manage government-funded projects for DTU professors, students, etc",
+          "The ERP solution enabled efficient allocation of resources, timely financial reporting, and systematic tracking of project milestones, significantly improving operational efficiency at DTU."
+        ],
+        "skills": [
+          "react",
+          "nodo",
+          "php"
+        ]
+      },
+      {
+        "company": "ITP Electronics",
+        "role": "Software Developer Intern",
+        "link": "https://www.itpelectronics.com/",
+        "start": "20 May, 2024",
+        "end": "12 July, 2024",
+        "place": "Delhi, India",
+        "description": [
+          "Worked on the research and development of Wire Harness Detection and Image to Bill of Material projects.",
+          "Contributed to the automation of Wire Harness Detection processes, enhancing precision and reducing manual effort.",
+          "Developed solutions to generate Bills of Material from images, integrating computer vision techniques with backend automation."
+        ],
+        "skills": [
+          "python",
+          "opencv",
+          "machine learning",
+          "automation"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "subtitle": "My Qualifications",
+    "entries": [
+      {
+        "grade": "9 CGPA (till 4th Semester)",
+        "institute": "Delhi Technological University",
+        "degree": "B.Tech. in Computer Science",
+        "start": "2022-08-01",
+        "end": "2026-05-31",
+        "place": "Delhi, India",
+        "description": [
+          "Specialized coursework in Data Structures, Algorithms, and Object-Oriented Programming.",
+          "Member of the Society of Robotics, actively participating in technical projects."
+        ],
+        "link": "https://www.dtu.ac.in/"
+      },
+      {
+        "grade": "98.8%",
+        "institute": "Vivekanand International School",
+        "degree": "CBSE Class XII",
+        "start": "2021-04-01",
+        "end": "2022-03-31",
+        "place": "Delhi, India",
+        "description": [
+          "Secured top grades in Mathematics, Physics, and Chemistry.",
+          "School topper with consistent academic excellence."
+        ],
+        "link": "https://vivekanandinternationalschool.com/"
+      },
+      {
+        "grade": "97.0%",
+        "institute": "Vivekanand International School",
+        "degree": "CBSE Class X",
+        "start": "2019-04-01",
+        "end": "2020-03-31",
+        "place": "Delhi, India",
+        "description": [
+          "Excelled in core subjects including Science and Mathematics.",
+          "Awarded for outstanding academic performance."
+        ],
+        "link": "https://vivekanandinternationalschool.com/"
+      }
+    ]
+  },
+  "project": {
+    "title": "Project",
+    "subtitle": "My Recent Work",
+    "learnMore": "Learn More",
+    "tableOfContent": "Table of Content",
+    "problem": "Problem",
+    "action": "Action",
+    "features": "Features",
+    "challenges": "Desafíos",
+    "results": "Results",
+    "future-scope": "Alcance futuro",
+    "technologies": "Technologies",
+    "projectLinks": "Project Links",
+    "github": "Github",
+    "link": "Link",
+    "entries": [
+      {
+        "title": "Hand Gesture Recognition",
+        "_id": "64df12e72b01b97fdf012345",
+        "img": "/work1.png",
+        "description": "Trained a Random Forest Classifier, leading to precise recognition of various hand gestures for intuitive and hands-free application control, achieving a recognition accuracy of over 90%.",
+        "problem": "Recognizing hand gestures in real-time posed challenges in ensuring high accuracy and low latency for practical applications. Existing methods often lacked precision or required excessive computational resources.",
+        "action": "Designed and trained a Random Forest Classifier using MediaPipe for feature extraction and Scikit-Learn for model training. Implemented preprocessing techniques to handle noisy data and ensure robustness in varying lighting conditions.",
+        "results": [
+          "Achieved over 90% recognition accuracy.",
+          "Enabled intuitive and hands-free application control.",
+          "The solution operates efficiently on both low-power and high-power devices.",
+          "Reduced the computational cost by optimizing the feature extraction process.",
+          "Improved user experience through real-time gesture recognition."
+        ],
+        "features": [
+          "Real-time hand gesture recognition with high accuracy.",
+          "User-friendly interface for intuitive control.",
+          "Support for low-power and high-power devices.",
+          "Optimized computational performance for scalability.",
+          "Robustness to variations in lighting conditions."
+        ],
+        "challenges": [
+          "Handling noisy datasets for accurate model training.",
+          "Ensuring robust performance under varying lighting conditions.",
+          "Optimizing computational costs for real-time operation.",
+          "Minimizing latency while maintaining precision."
+        ],
+        "future-scope": [
+          "Integration with AR/VR systems for immersive applications.",
+          "Support for additional gestures and customization.",
+          "Enhancing accuracy using advanced neural networks.",
+          "Expanding compatibility across diverse devices and platforms."
+        ],
+        "tags": [
+          "Python",
+          "MediaPipe",
+          "Scikit-Learn"
+        ],
+        "github": "https://github.com/Anujjoshi3105/handGesture/",
+        "link": "https://github.com/Anujjoshi3105/handGesture/",
+        "type": "Machine Learning",
+        "createdAt": "2023-08-08T12:00:00.000Z",
+        "updatedAt": "2023-08-08T12:00:00.000Z"
+      },
+      {
+        "title": "CineMagic: Movie Recommender",
+        "img": "/work2.png",
+        "_id": "64df12e72b01b97fdf012346",
+        "description": "Implemented advanced recommendation algorithms to provide personalized movie suggestions based on movie content and similarity, and trends.",
+        "problem": "Users often struggled to discover movies aligned with their preferences due to the vast availability of content. Traditional recommendation systems failed to provide personalized and trend-based suggestions.",
+        "action": "Implemented advanced recommendation algorithms leveraging Spacy and Cinemagoer for content analysis and movie metadata processing. Designed a similarity model using Scikit-Learn to compare user preferences with movie features.",
+        "results": [
+          "Provided personalized movie suggestions based on user preferences and current trends.",
+          "Increased user engagement and satisfaction through highly accurate recommendations.",
+          "Utilized advanced algorithms to enhance content-based filtering.",
+          "Reduced the complexity of recommendation models by optimizing the feature comparison process.",
+          "Ensured high scalability to handle a large number of movie records and user data."
+        ],
+        "features": [
+          "Content-based movie recommendation system.",
+          "Trend-based suggestion engine for dynamic preferences.",
+          "Highly scalable system for large datasets.",
+          "User-friendly interface for seamless interaction.",
+          "Optimized algorithms for fast and accurate recommendations."
+        ],
+        "challenges": [
+          "Processing large datasets of movie metadata efficiently.",
+          "Maintaining recommendation accuracy with evolving trends.",
+          "Optimizing algorithms for low computational complexity.",
+          "Ensuring scalability for high user and movie data volume."
+        ],
+        "future-scope": [
+          "Incorporating collaborative filtering for improved accuracy.",
+          "Adding multilingual support for diverse user bases.",
+          "Integrating with streaming platforms for real-time recommendations.",
+          "Enhancing the UI for an immersive user experience."
+        ],
+        "tags": [
+          "Spacy",
+          "Cinemagoer",
+          "Scikit-Learn"
+        ],
+        "github": "https://github.com/Anujjoshi3105/CineMagic/",
+        "link": "https://github.com/Anujjoshi3105/CineMagic/",
+        "type": "Machine Learning",
+        "createdAt": "2023-08-08T12:00:00.000Z",
+        "updatedAt": "2023-08-08T12:00:00.000Z"
+      },
+      {
+        "title": "Dev Diaries",
+        "img": "/work6.png",
+        "_id": "64df12e72b01b97fdf012347",
+        "description": "A blog platform for developers of all levels to share experiences and insights. Features include user authentication (NextAuth.js), CRUD operations for blog posts, comments, likes, shares, and blog & profile image management with Firebase.",
+        "problem": "Developers lacked a centralized platform to share experiences, insights, and interact effectively. Existing platforms often provided limited customization and lacked essential features like image management or secure user authentication.",
+        "action": "Built a full-stack blog platform using Next.js with Shadcn for UI components. Integrated PostgreSQL and Prisma for database management and Firebase for image hosting and authentication. Implemented CRUD functionality for blogs, comments, likes, and shares.",
+        "results": [
+          "Created an intuitive, user-friendly platform for developers to share insights.",
+          "Enabled secure user authentication and image management using Firebase.",
+          "Increased user engagement through features like blog comments, likes, and shares.",
+          "Optimized the platform for scalability with a PostgreSQL database and Prisma.",
+          "Enhanced the user interface using TailwindCSS and Shadcn for a responsive and modern design."
+        ],
+        "features": [
+          "User authentication and secure access control.",
+          "Support for creating, editing, and deleting blog posts.",
+          "Interactive features like comments, likes, and shares.",
+          "Image hosting and management using Firebase.",
+          "Scalable backend architecture with Prisma and PostgreSQL."
+        ],
+        "challenges": [
+          "Implementing secure authentication and user session management.",
+          "Handling large numbers of concurrent users and blogs.",
+          "Ensuring seamless image uploads and storage.",
+          "Maintaining responsiveness and UI consistency across devices."
+        ],
+        "future-scope": [
+          "Adding a recommendation engine for personalized content.",
+          "Integrating analytics to track user engagement.",
+          "Improving SEO to enhance platform visibility.",
+          "Supporting multiple content formats like videos and podcasts."
+        ],
+        "tags": [
+          "Next.js",
+          "Shadcn",
+          "PostgreSQL",
+          "Prisma",
+          "Firebase"
+        ],
+        "github": "https://github.com/Anujjoshi3105/devdiaries/",
+        "link": "https://devdiaries3105.vercel.app/",
+        "type": "Web Development",
+        "createdAt": "2023-08-08T12:00:00.000Z",
+        "updatedAt": "2023-08-08T12:00:00.000Z"
+      },
+      {
+        "title": "LIMSTIR-DTU",
+        "img": "/work3.png",
+        "_id": "64df12e72b01b97fdf012543",
+        "description": "A redesign of the LIMSTIR-DTU website, focusing on modern UI components and mobile responsiveness using TailwindCSS and JavaScript.",
+        "problem": "The existing website for LIMSTIR-DTU lacked modern design, responsive features, and required updates to align with current UI trends.",
+        "action": "Redesigned and developed the website using HTML, TailwindCSS, and JavaScript to enhance the user experience and ensure mobile responsiveness.",
+        "results": [
+          "Updated the website with a modern, sleek design that aligns with current UI trends.",
+          "Improved accessibility and responsiveness for mobile and desktop devices.",
+          "Increased site traffic due to a more appealing and user-friendly design.",
+          "Streamlined navigation and made content more easily accessible.",
+          "Enhanced the website’s performance with optimized CSS and JavaScript."
+        ],
+        "features": [
+          "Modern and responsive design.",
+          "Streamlined navigation for better usability.",
+          "Optimized performance for faster load times.",
+          "Mobile-first design approach.",
+          "Interactive UI components with TailwindCSS."
+        ],
+        "challenges": [
+          "Ensuring consistent responsiveness across devices.",
+          "Optimizing CSS and JavaScript for performance.",
+          "Designing intuitive and modern UI components.",
+          "Incorporating accessibility features."
+        ],
+        "future-scope": [
+          "Adding an admin panel for content management.",
+          "Incorporating analytics to track user interactions.",
+          "Improving SEO for better search engine visibility.",
+          "Integrating dynamic elements like announcements or events."
+        ],
+        "tags": [
+          "HTML",
+          "Tailwind-CSS",
+          "JavaScript"
+        ],
+        "github": "https://github.com/Anujjoshi3105/handGesture/",
+        "link": "https://github.com/Anujjoshi3105/handGesture/",
+        "type": "Web Development",
+        "createdAt": "2023-08-08T12:00:00.000Z",
+        "updatedAt": "2023-08-08T12:00:00.000Z"
+      },
+      {
+        "title": "IRD-DTU",
+        "img": "/work4.png",
+        "_id": "64df12e72b01b97fdf012354",
+        "description": "Developed a dynamic, responsive website for the Industrial Research and Development Unit at DTU to showcase ongoing projects and updates.",
+        "problem": "The Industrial Research and Development Unit at DTU needed a more dynamic and functional website to display their ongoing projects and updates.",
+        "action": "Developed a responsive website using HTML, TailwindCSS, and ReactJS for interactivity and modern UI components.",
+        "results": [
+          "Delivered a responsive and dynamic website for the IRD-DTU.",
+          "Implemented ReactJS for better interactivity and user experience.",
+          "Enhanced the site’s performance by optimizing loading speeds.",
+          "Provided real-time updates and interactive features for users.",
+          "Improved project visibility and user engagement with a modern UI design."
+        ],
+        "features": [
+          "Dynamic and interactive UI with ReactJS.",
+          "Mobile-friendly, responsive design.",
+          "Support for showcasing multiple projects and updates.",
+          "Modern UI elements with TailwindCSS.",
+          "Real-time content updates."
+        ],
+        "challenges": [
+          "Optimizing performance for real-time updates.",
+          "Ensuring seamless interactivity with ReactJS.",
+          "Designing scalable components for additional content.",
+          "Implementing modern UI design principles."
+        ],
+        "future-scope": [
+          "Adding a search and filter feature for projects.",
+          "Integrating user feedback for improved content delivery.",
+          "Enhancing the design with animations.",
+          "Building a content management system for easy updates."
+        ],
+        "tags": [
+          "HTML",
+          "Tailwind-CSS",
+          "ReactJS"
+        ],
+        "github": "https://github.com/Anujjoshi3105/IRD-DTU/",
+        "link": "https://ird-dtu.vercel.app/",
+        "type": "Web Development",
+        "createdAt": "2023-08-08T12:00:00.000Z",
+        "updatedAt": "2023-08-08T12:00:00.000Z"
+      }
+    ]
+  },
+  "blog": {
+    "title": "Recent Blogs",
+    "subtitle": "Insights, Tutorials and Tech Trends",
+    "search": "Search Blogs, Tutorials and Tech Trends",
+    "notFound": "NO CONTENT FOUND"
+  },
+  "quote": {
+    "text": "You don't learn to walk by <highlight>following rules</highlight>. You learn by <highlight>doing and falling over</highlight>.",
+    "author": "Richard Branson"
+  },
+  "testimonial": {
+    "title": "Testimonials",
+    "subtitle": "What others say about me",
+    "entries": [
+      {
+        "name": "Rajiv Kapoor",
+        "role": "Professor, DTU",
+        "avatar": "/prof.jpg",
+        "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, ipsum incidunt. Vero temporibus quasi libero voluptatum minima error, sint maiores eaque modi, quam optio ipsa assumenda, molestias aspernatur perspiciatis nobis."
+      },
+      {
+        "name": "Rohan Kumar",
+        "role": "Professor, DTU",
+        "avatar": "/prof.jpg",
+        "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, ipsum incidunt. Vero temporibus quasi libero voluptatum minima error, sint maiores eaque modi, quam optio ipsa assumenda, molestias aspernatur perspiciatis nobis."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "Feel free to contact",
+    "heading": "Let's talk about everything!",
+    "description": "Have a question or want to work together? Don't hesitate to reach out. I'm always eager to connect and explore opportunities to bring my skills and passion to your projects or teams.",
+    "mail": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Your Message",
+    "submit": "Send Message",
+    "loading": "Sending message...",
+    "success": "Message sent successfully!",
+    "error": "An error occurred while sending the message."
+  }
+}

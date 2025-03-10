@@ -1,5 +1,5 @@
 import { connectDB } from "@/lib/db";
-import ProjectModel from "@/models/ProjectModel";
+import ProjectModel from "@/lib/models/project.model";
 
 export async function GET(request: Request) {
   const searchParams = new URL(request.url);

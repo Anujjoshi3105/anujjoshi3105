@@ -1,8 +1,8 @@
 "use server";
 
-import blogs from "@/data/seed/blogs.json";
+import blogs from "@/lib/data/seed/blogs.json";
 import { connectDB } from "@/lib/db";
-import BlogModel from "@/models/BlogModel";
+import BlogModel from "@/lib/models/blog.model";
 import { isValidObjectId } from "mongoose";
 
 const sanitizeMongooseObject = (doc: any) => {
